@@ -154,11 +154,11 @@ const Prediction = () => {
       <div className="w-1/2 border-l border-gray-300">
           {!prediction && <img src={"https://media.giphy.com/media/4Zd5CCT47enl32Sx3P/giphy.gif"} alt="Loading" className="mx-auto rounded" />}
           {prediction && (
-            <div className="bg-green-100 border flex flex-col gap-5 border-green-400 text-green-700 py-3 rounded mr-4 text-center">
-              <img src={"https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2txb242N3pkMmp0ODRiangydm9raDY5OHBhYmw1Y2NobjM0cGZtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W1GG6RYUcWxoHl3jV9/giphy.gif"} alt="Loading" className="mx-auto pt-4 rounded-md" />
-              <p className='font-bold pb-3'>{prediction}</p>
-            </div>
-          )}
+      <div className="bg-green-100 border flex flex-col gap-5 border-green-400 text-green-700 py-3 rounded mr-4 text-center">
+        <img src={prediction.gif_url} alt="Prediction GIF" className="mx-auto pt-4 rounded-md" />
+        <p className='font-bold pb-3'>{prediction.prediction}</p>
+      </div>
+    )}
         </div>
     </div>
   );

@@ -30,9 +30,15 @@ const Footer = () => {
           <p className="text-gray-400">+123 456 7890</p>
         </div>
       </div>
-      <div className="border-t border-gray-800 mt-5 py-3 text-center">
+     <div className='flex justify-between p-3'>
+     <div className="border-t border-gray-800 mt-5 py-3 text-center">
         <p>&copy; 2024 Diabetes Prediction. All rights reserved.</p>
       </div>
+      <div className="border-t border-gray-800 mt-5 py-3 text-center">
+       <a href="https://www.github.com/BamaCharanChhandogi"><p>Bama Charan Chhandogi.</p></a>
+
+      </div>
+     </div>
     </footer>
   );
 };
