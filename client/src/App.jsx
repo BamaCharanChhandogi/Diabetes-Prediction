@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Prediction from './components/Prediction';
 import DataInfo from './components/DataInfo';
 import Visualization from './components/Visualization';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/visualization" element={<Visualization />} />
           </Routes>
         </div>
+        <Footer/>
       </div>
     </Router>
   );
