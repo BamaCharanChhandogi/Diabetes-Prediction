@@ -13,7 +13,6 @@ MarkupSafe==2.1.5
 numpy==1.26.4
 pandas==2.2.1
 python-dateutil==2.9.0.post0
-python-dotenv=
 pytz==2024.1
 six==1.16.0
 typing_extensions==4.10.0
