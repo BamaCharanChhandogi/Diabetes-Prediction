@@ -156,7 +156,7 @@ const Prediction = () => {
           {prediction && (
       <div className="bg-green-100 border flex flex-col gap-5 border-green-400 text-green-700 py-3 rounded mr-4 text-center">
         <img src={prediction.gif_url} alt="Prediction GIF" className="mx-auto pt-4 rounded-md" />
-        <p className='font-bold pb-3'>{prediction.prediction}</p>
+        <p className='font-bold text-2xl px-3 mx-2 '>{prediction.prediction}</p>
       </div>
     )}
         </div>
