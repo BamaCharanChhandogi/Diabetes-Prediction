@@ -42,6 +42,7 @@ const Navbar = () => {
               {/* Github Icon */}
               <a
                 href="https://github.com/BamaCharanChhandogi/Diabetes-Prediction" // Add your GitHub URL
+                target="_blank"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium flex gap-2 items-center border-2 border-red-800">
                  <CiStar className="w-7 h-7 text-yellow-500 font-bold"/> <FaGithub className="h-7 w-7"/>
               </a>

@@ -64,7 +64,7 @@ const VisualizationPage = () => {
           />
         </div>
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold mb-4 text-indigo-600">CF Plot</h2>
+          <h2 className="text-xl font-bold mb-4 text-indigo-600">Cystic Fibrosis Plot</h2>
           <img
             src={CF}
             alt="Residual Plot"
@@ -73,7 +73,7 @@ const VisualizationPage = () => {
           />
         </div>
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold mb-4 text-indigo-600">DPF Plot</h2>
+          <h2 className="text-xl font-bold mb-4 text-indigo-600">Diabetes Pedigree Function Plot</h2>
           <img
             src={DPF}
             alt="Residual Plot"

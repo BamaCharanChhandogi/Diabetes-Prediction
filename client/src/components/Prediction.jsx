@@ -13,9 +13,11 @@ const Prediction = () => {
     DPF: '',
   });
   const [prediction, setPrediction] = useState(null);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setButtonDisabled(true);
     try {
       const response = await axios.post('http://127.0.0.1:5000/predict', userInput);
       setPrediction(response.data);
@@ -23,7 +25,9 @@ const Prediction = () => {
     } catch (error) {
       console.error('Error:', error);
     }
+    setButtonDisabled(false);
   };
+
 
   const handleChange = (e) => {
     setUserInput({ ...userInput, [e.target.name]: e.target.value });
@@ -139,7 +143,12 @@ const Prediction = () => {
           <div className="flex justify-center mt-6">
             <button
               type="submit"
-              className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-300"
+              className={`py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-300 ${
+                buttonDisabled
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-purple-500 hover:bg-purple-700 text-white font-bold'
+              }`}
+              disabled={buttonDisabled}
             >
               Predict
             </button>
