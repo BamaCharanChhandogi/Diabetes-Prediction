@@ -19,7 +19,7 @@ const Prediction = () => {
     e.preventDefault();
     setButtonDisabled(true);
     try {
-      const response = await axios.post('http://127.0.0.1:5000/predict', userInput);
+      const response = await axios.post('https://diabetes-prediction-1-6a5i.onrender.com/predict', userInput);
       setPrediction(response.data);
       console.log(response.data);
     } catch (error) {
