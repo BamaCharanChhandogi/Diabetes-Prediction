@@ -12,7 +12,7 @@ const App = () => {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <div className="flex-grow container mx-auto">
+        <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/data-info" element={<DataInfo />} />

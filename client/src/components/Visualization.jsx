@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import heatmapImage from '../assets/plots/heatmap.png';
 import agePlot from '../assets/plots/age_plot.png';
 import BMIPlot from '../assets/plots/BMI_plot.png';
@@ -22,6 +22,9 @@ const VisualizationPage = () => {
   const closeModal = () => {
     setModalImage(null);
   };
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  })
 
   return (
     <div className="container mx-auto py-8 text-center">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Prediction = () => {
@@ -28,17 +28,20 @@ const Prediction = () => {
     setButtonDisabled(false);
   };
 
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  })
 
   const handleChange = (e) => {
     setUserInput({ ...userInput, [e.target.name]: e.target.value });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-      <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 ">
+    <div className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center sm:flex-row sm:justify-center pb-3 md:pb-0">
+      <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 sm:p-6 md:p-8 w-full sm:w-auto sm:order-1">
         <h1 className="text-3xl font-bold mb-6 text-center text-purple-800">Enter all details</h1>
         <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <div className="mb-4">
                 <label htmlFor="Age" className="block text-gray-700 font-bold mb-2">
@@ -154,21 +157,24 @@ const Prediction = () => {
             </button>
           </div>
         </form>
-        {/* {prediction && (
-          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-6">
-            <p>{prediction}</p>
+      </div>
+      <div className="w-full sm:w-1/2 sm:ml-8 mt-8 sm:mt-0 sm:order-2">
+        {!prediction && (
+          <div className="hidden sm:block">
+            <img
+              src="https://media.giphy.com/media/4Zd5CCT47enl32Sx3P/giphy.gif"
+              alt="Loading"
+              className="mx-auto rounded"
+            />
           </div>
-        )} */}
+        )}
+        {prediction && (
+         <div className="bg-green-100 w-2/3 md:w-fit border mx-auto flex flex-col gap-5 border-green-400 text-green-700 py-2 rounded md:mr-4 text-center">
+         <img src={prediction.gif_url} alt="Prediction GIF" className="mx-auto pt-4 rounded-md" />
+         <p className='font-bold text-2xl px-3 mx-2 '>{prediction.prediction}</p>
+       </div>
+        )}
       </div>
-      <div className="w-1/2 border-l border-gray-300">
-          {!prediction && <img src={"https://media.giphy.com/media/4Zd5CCT47enl32Sx3P/giphy.gif"} alt="Loading" className="mx-auto rounded" />}
-          {prediction && (
-      <div className="bg-green-100 border flex flex-col gap-5 border-green-400 text-green-700 py-3 rounded mr-4 text-center">
-        <img src={prediction.gif_url} alt="Prediction GIF" className="mx-auto pt-4 rounded-md" />
-        <p className='font-bold text-2xl px-3 mx-2 '>{prediction.prediction}</p>
-      </div>
-    )}
-        </div>
     </div>
   );
 };
