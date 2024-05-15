@@ -7,7 +7,7 @@ function DataInfo() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/src/components/diabetes.csv');
+        const response = await fetch('/diabetes.csv');
         const csvData = await response.text();
         Papa.parse(csvData, {
           header: true,
