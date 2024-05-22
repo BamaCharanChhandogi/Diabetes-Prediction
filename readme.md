@@ -2,6 +2,9 @@
 
 Welcome to the Diabetes Prediction Website! This website provides a platform for users to predict their likelihood of developing diabetes based on various factors.
 
+![image](https://github.com/BamaCharanChhandogi/Diabetes-Prediction/assets/69814563/7e9783f6-779c-458b-b423-15bee3fa88f0)
+
+
 ## Features
 
 - **Prediction Page**: Users can input their demographic and health data to receive a prediction of their likelihood of developing diabetes.
