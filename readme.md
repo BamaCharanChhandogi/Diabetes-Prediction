@@ -116,15 +116,68 @@ python app.py
 
 ## 🤝 Contributing
 
-We welcome contributions! To contribute, follow these steps:
+We welcome contributions! To contribute to this project, follow these detailed steps:
 
-1. 🍴 Fork the repository.
-2. 📥 Clone the forked repository.
-3. 🌿 Create a new branch for your feature or bug fix.
-4. ✨ Make your changes.
-5. 📝 Commit your changes with a descriptive commit message.
-6. 🔄 Push the changes to your fork.
-7. 🔧 Create a pull request to the main repository.
+1. 🍴 **Fork the Repository**:
+   - Navigate to the main repository.
+   - Click on the "Fork" button in the upper right corner of the repository page. This will create a copy of the repository in your GitHub account.
+
+2. 📥 **Clone the Forked Repository**:
+   - Clone your forked repository to your local machine using the following command:
+     ```bash
+     git clone https://github.com/<your-username>/<repository-name>.git
+     ```
+   - Replace `<your-username>` with your GitHub username and `<repository-name>` with the name of the repository you just forked.
+
+3. 🌿 **Create a New Branch**:
+   - Navigate into the cloned repository:
+     ```bash
+     cd <repository-name>
+     ```
+   - Create a new branch for your feature or bug fix:
+     ```bash
+     git checkout -b <branch-name>
+     ```
+   - Replace `<branch-name>` with a descriptive name for your branch, such as `feature/add-new-feature` or `bugfix/fix-issue`.
+
+4. ✨ **Make Your Changes**:
+   - Implement your changes in the new branch you created.
+   - Ensure that your code follows the project's coding standards and guidelines.
+   - Test your changes thoroughly to ensure they work as expected.
+
+5. 📝 **Commit Your Changes**:
+   - Stage your changes for commit:
+     ```bash
+     git add .
+     ```
+   - Commit your changes with a descriptive commit message:
+     ```bash
+     git commit -m "Add detailed description of what your commit does"
+     ```
+   - Provide a clear and concise commit message that explains what changes you have made and why.
+
+6. 🔄 **Push the Changes to Your Fork**:
+   - Push your changes to the branch in your forked repository:
+     ```bash
+     git push origin <branch-name>
+     ```
+
+7. 🔧 **Create a Pull Request**:
+   - Go to your forked repository on GitHub.
+   - Click on the "Compare & pull request" button for the branch you just pushed.
+   - Provide a descriptive title and detailed description for your pull request.
+   - Explain what changes you have made, why you made them, and any other relevant information.
+   - Submit the pull request to the main repository.
+
+8. 🛠 **Review Process**:
+   - Your pull request will be reviewed by the maintainers of the project.
+   - Be responsive to any feedback or questions they may have.
+   - Make any necessary changes as requested by the maintainers.
+
+9. 🎉 **Merge**:
+   - Once your pull request is approved, it will be merged into the main repository.
+   - Congratulations! You have successfully contributed to the project.
+
 
 <br>
 
