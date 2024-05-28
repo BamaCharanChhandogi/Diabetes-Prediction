@@ -1,5 +1,4 @@
-//<h1><strong>DIABETES PREDICTION WEBSITE</strong></h1>
-# **DIABETES PREDICTION WEBSITE**
+<h1><strong>DIABETES PREDICTION WEBSITE</strong></h1>
 
 <br>
 
