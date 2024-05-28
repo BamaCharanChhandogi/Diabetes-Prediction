@@ -1,4 +1,4 @@
-## **DIABETES PREDICTION WEBSITE**
+<h1><strong>DIABETES PREDICTION WEBSITE</strong></h1>
 
 <br>
 
@@ -6,11 +6,11 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 
 <br>
 
-**Website Link** :- https://diabetes-prediction-gamma.vercel.app/prediction
+**Website Link** :- https://diabetes-prediction-gamma.vercel.app/
 
 <br>
 
-<div style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+<div style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border: 5px solid black;">
   <img src="https://github.com/BamaCharanChhandogi/Diabetes-Prediction/assets/69814563/7e9783f6-779c-458b-b423-15bee3fa88f0" alt="Diabetes Prediction Website" style="border-radius: 10px;">
 </div>
 
