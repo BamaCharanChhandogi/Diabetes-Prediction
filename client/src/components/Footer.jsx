@@ -9,9 +9,9 @@ const Footer = () => {
           <h2 className="text-2xl font-semibold mb-4">Stay Connected</h2>
           <div className="flex space-x-4 text-lg">
             <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaFacebookF /></a>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaTwitter /></a>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaInstagram /></a>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaLinkedinIn /></a>
+            <a href="https://x.com/BamacharanCh/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaTwitter /></a>
+            <a href="https://www.instagram.com/loving_coding" className="text-white hover:text-gray-400 transition-colors duration-300"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/bama-charan-chhandogi-b63420240/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaLinkedinIn /></a>
           </div>
         </div>
         <div className="w-full md:w-1/3">
@@ -19,8 +19,8 @@ const Footer = () => {
           <ul className="space-y-2 text-lg">
             <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">Home</a></li>
             <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">About</a></li>
-            <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">Prediction</a></li>
-            <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">Contact</a></li>
+            <li><a href="/prediction" className="text-white hover:text-gray-400 transition-colors duration-300">Prediction</a></li>
+            <li><a href="/contact" className="text-white hover:text-gray-400 transition-colors duration-300">Contact</a></li>
           </ul>
         </div>
         <div className="w-full md:w-1/3">
