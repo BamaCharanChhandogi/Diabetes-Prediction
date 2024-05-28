@@ -1,5 +1,10 @@
-import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import React from "react";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,24 +13,74 @@ const Footer = () => {
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl font-semibold mb-4">Stay Connected</h2>
           <div className="flex space-x-4 text-lg">
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaFacebookF /></a>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaTwitter /></a>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaInstagram /></a>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaLinkedinIn /></a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-colors duration-300"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-colors duration-300"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-colors duration-300"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-colors duration-300"
+            >
+              <FaLinkedinIn />
+            </a>
           </div>
         </div>
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl font-semibold mb-4">Quick Links</h2>
           <ul className="space-y-2 text-lg">
-            <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">Home</a></li>
-            <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">About</a></li>
-            <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">Prediction</a></li>
-            <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">Contact</a></li>
+            <li>
+              <a
+                href="#"
+                className="text-white hover:text-gray-400 transition-colors duration-300"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-white hover:text-gray-400 transition-colors duration-300"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-white hover:text-gray-400 transition-colors duration-300"
+              >
+                Prediction
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-white hover:text-gray-400 transition-colors duration-300"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-          <p className="text-gray-400 text-lg">123 Street Name, City Name, Country</p>
+          <p className="text-gray-400 text-lg">
+            123 Street Name, City Name, Country
+          </p>
           <p className="text-gray-400 text-lg">contact@example.com</p>
           <p className="text-gray-400 text-lg">+123 456 7890</p>
         </div>
@@ -35,7 +90,10 @@ const Footer = () => {
           <p>&copy; 2024 Diabetes Prediction. All rights reserved.</p>
         </div>
         <div>
-          <a href="https://www.github.com/BamaCharanChhandogi" className="text-gray-400 hover:text-white transition-colors duration-300 text-center md:text-right">
+          <a
+            href="https://www.github.com/BamaCharanChhandogi"
+            className="text-gray-400 hover:text-white transition-colors duration-300 text-center md:text-right"
+          >
             <p>Developed by Bama Charan Chhandogi</p>
           </a>
         </div>
