@@ -11,6 +11,7 @@ import pregnancies from '../assets/plots/pregnancies.png';
 import skin from '../assets/plots/skin.png';
 import { IoClose } from "react-icons/io5";
 import { FaDownload } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const VisualizationPage = () => {
   const [modalImage, setModalImage] = useState(null);
@@ -28,7 +29,18 @@ const VisualizationPage = () => {
 
   return (
     <div className="container mx-auto py-8 text-center">
-      <h1 className="text-3xl font-bold mb-6 text-indigo-600 text-center border-b-2 p-2">Diabetes Visualization</h1>
+      <motion.h1
+                      initial={{ opacity: 0, x: -150 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="text-3xl font-bold mb-6 text-indigo-600 text-center border-b-2 p-2"
+                    >Diabetes Visualization</motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* <div className="bg-gray-100 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Correlation Heatmap</h2>
@@ -39,7 +51,18 @@ const VisualizationPage = () => {
             onClick={() => openModel(heatmapImage)}
           />
         </div> */}
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Age Plot</h2>
           <img
             src={agePlot}
@@ -47,8 +70,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(agePlot)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">BMI Plot</h2>
           <img
             src={BMIPlot}
@@ -56,8 +90,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(BMIPlot)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Blood Pressure Plot</h2>
           <img
             src={BloodPressurePlot}
@@ -65,8 +110,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(BloodPressurePlot)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Cystic Fibrosis Plot</h2>
           <img
             src={CF}
@@ -74,8 +130,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(CF)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Diabetes Pedigree Function Plot</h2>
           <img
             src={DPF}
@@ -83,8 +150,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(DPF)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Glucose Plot</h2>
           <img
             src={glucose}
@@ -92,8 +170,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(glucose)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Insulin Plot</h2>
           <img
             src={insulin}
@@ -101,8 +190,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(insulin)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Pregnancies Plot</h2>
           <img
             src={pregnancies}
@@ -110,8 +210,19 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(pregnancies)}
           />
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+        </motion.div>
+        <motion.div
+                      initial={{ opacity: 0, y: 150 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 100,
+                        delay: 0.5,
+                      }}
+                      className="bg-gray-100 p-4 rounded-lg shadow-md"
+                    >
           <h2 className="text-xl font-bold mb-4 text-indigo-600">Skin Plot</h2>
           <img
             src={skin}
@@ -119,7 +230,7 @@ const VisualizationPage = () => {
             className="mx-auto w-full h-64 object-cover rounded-lg cursor-pointer"
             onClick={() => openModel(skin)}
           />
-        </div>
+        </motion.div>
       </div>
       {modalImage && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
