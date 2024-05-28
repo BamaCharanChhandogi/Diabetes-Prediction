@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
 import axios from 'axios';
 
 const Prediction = () => {
@@ -38,7 +39,17 @@ const Prediction = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center sm:flex-row sm:justify-center pb-3 md:pb-0">
-      <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 sm:p-6 md:p-8 w-full sm:w-auto sm:order-1">
+      <motion.div
+        initial={{ opacity: 0, x: -150}}
+        whileInView={{ opacity: 1, x: 0}}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          type: "spring",
+          stiffness: 100,
+          delay: 0.5,
+        }}
+        className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 sm:p-6 md:p-8 w-full sm:w-auto sm:order-1" >
         <h1 className="text-3xl font-bold mb-6 text-center text-purple-800">Enter all details</h1>
         <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -157,8 +168,18 @@ const Prediction = () => {
             </button>
           </div>
         </form>
-      </div>
-      <div className="w-full sm:w-1/2 sm:ml-8 mt-8 sm:mt-0 sm:order-2">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 150}}
+        whileInView={{ opacity: 1, x: 0}}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          type: "spring",
+          stiffness: 100,
+          delay: 0.5,
+        }}
+        className="w-full sm:w-1/2 sm:ml-8 mt-8 sm:mt-0 sm:order-2" >
         {!prediction && (
           <div className="hidden sm:block">
             <img
@@ -174,7 +195,7 @@ const Prediction = () => {
          <p className='font-bold text-2xl px-3 mx-2 '>{prediction.prediction}</p>
        </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };
