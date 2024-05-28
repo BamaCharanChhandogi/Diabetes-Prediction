@@ -36,9 +36,9 @@ Our Diabetes Prediction Website offers a user-friendly platform for individuals 
 ## ✨ Key Features
 
 - **🔍 Prediction Page**: This page lets you type in your personal details and health info. After that, it gives you an idea of how likely you are to get diabetes. It's like having a little crystal ball for your health!
-- 
+  
 - **📊 Visualization Page**: Here, you get to see colorful charts and graphs that show how different things, like your weight or blood sugar levels, might affect your chances of getting diabetes. It's like watching a fun picture book about your health!
-- 
+  
 - **ℹ️ About Page**: Our About Page offers a detailed overview of the Diabetes Prediction Website, elucidating its purpose, features, and the dedicated team driving its development. It serves as a hub of information, empowering users with insights into their health risks while highlighting our mission to democratize predictive analytics for proactive wellness.
   
 <br>
