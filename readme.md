@@ -29,7 +29,9 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 
 ## About Our Project 🌟
 
-Our Diabetes Prediction Website offers a user-friendly platform for individuals to assess their risk of developing diabetes. By inputting demographic and health data, users receive personalized predictions generated through advanced machine learning algorithms. Our visualization tools provide clear insights into the relationships between various risk factors and diabetes development likelihood. Transparency is key, as our about page offers details on our mission, team, and commitment to data security. Our goal is to empower individuals with actionable insights to make informed decisions for better health outcomes.
+<p align="justify">
+  Our Diabetes Prediction Website offers a user-friendly platform for individuals to assess their risk of developing diabetes. By inputting demographic and health data, users receive personalized predictions generated through advanced machine learning algorithms. Our visualization tools provide clear insights into the relationships between various risk factors and diabetes development likelihood. Transparency is key, as our about page offers details on our mission, team, and commitment to data security. Our goal is to empower individuals with actionable insights to make informed decisions for better health outcomes.
+</p>
 
 <br>
 
