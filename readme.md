@@ -105,7 +105,7 @@ pip install -r requirements.txt
 #### Start Frontend Development Server
 ```bash
 cd client
-npm start
+npm run dev
 ```
 
 #### Start Backend Development Server
