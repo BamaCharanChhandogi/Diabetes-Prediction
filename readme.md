@@ -10,9 +10,8 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 
 <br>
 
-<div style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border: 5px solid black; text-align: center;">
-  <img src="https://github.com/BamaCharanChhandogi/Diabetes-Prediction/assets/69814563/7e9783f6-779c-458b-b423-15bee3fa88f0" alt="Diabetes Prediction Website" style="border-radius: 10px; max-width: 100%; height: auto;">
-  <p style="margin-top: 10px; font-weight: bold;">Diabetes Prediction Website</p>
+<div style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border: 5px solid black; display: inline-block;">
+  <img src="https://github.com/BamaCharanChhandogi/Diabetes-Prediction/assets/69814563/7e9783f6-779c-458b-b423-15bee3fa88f0" alt="Diabetes Prediction Website" style="border-radius: 10px; display: block;">
 </div>
 
 <br>
