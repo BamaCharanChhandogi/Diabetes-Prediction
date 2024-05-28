@@ -1,9 +1,15 @@
 ## **DIABETES PREDICTION WEBSITE**
+
 <br>
+
 Welcome to our Diabetes Prediction Website! Our platform offers a unique opportunity for users to gain insights into their potential risk of developing diabetes by leveraging predictive analytics and visualization techniques.
+
 <br>
+
 **Website Link** :- https://diabetes-prediction-gamma.vercel.app/prediction
+
 <br>
+
 <div style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
   <img src="https://github.com/BamaCharanChhandogi/Diabetes-Prediction/assets/69814563/7e9783f6-779c-458b-b423-15bee3fa88f0" alt="Diabetes Prediction Website" style="border-radius: 10px;">
 </div>
