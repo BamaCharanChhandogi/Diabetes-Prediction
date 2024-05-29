@@ -6,6 +6,7 @@ import Prediction from './components/Prediction';
 import DataInfo from './components/DataInfo';
 import Visualization from './components/Visualization';
 import Footer from './components/Footer';
+import FloatBtn from './components/FloatBtn';
 import FAQ from './components/FAQ';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           </Routes>
         </div>
         <Footer/>
+       <FloatBtn />
       </div>
     </Router>
   );
