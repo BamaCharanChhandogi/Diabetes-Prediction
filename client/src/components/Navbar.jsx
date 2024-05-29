@@ -40,11 +40,20 @@ const Navbar = () => {
               >
                 Prediction
               </Link>
+
+              
               <Link
                 to="/visualization"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
               >
                 Visualization
+              </Link>
+              
+              <Link
+                to="/FAQ"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+              >
+                FAQ
               </Link>
               <a
                 href="https://github.com/BamaCharanChhandogi/Diabetes-Prediction"
