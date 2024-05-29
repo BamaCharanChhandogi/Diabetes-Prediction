@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import axios from "axios";
 
 const Prediction = () => {
   const [userInput, setUserInput] = useState({
-    Age: '',
-    Pregnancies: '',
-    Glucose: '',
-    BloodPressure: '',
-    Insulin: '',
-    BMI: '',
-    SkinThickness: '',
-    DPF: '',
+    Age: "",
+    Pregnancies: "",
+    Glucose: "",
+    BloodPressure: "",
+    Insulin: "",
+    BMI: "",
+    SkinThickness: "",
+    DPF: "",
   });
   const [prediction, setPrediction] = useState(null);
   const [buttonDisabled, setButtonDisabled] = useState(false);
@@ -19,18 +20,21 @@ const Prediction = () => {
     e.preventDefault();
     setButtonDisabled(true);
     try {
-      const response = await axios.post('https://diabetes-prediction-1-6a5i.onrender.com/predict', userInput);
+      const response = await axios.post(
+        "https://diabetes-prediction-1-6a5i.onrender.com/predict",
+        userInput
+      );
       setPrediction(response.data);
       console.log(response.data);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
     setButtonDisabled(false);
   };
 
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  })
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   const handleChange = (e) => {
     setUserInput({ ...userInput, [e.target.name]: e.target.value });
@@ -38,13 +42,29 @@ const Prediction = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center sm:flex-row sm:justify-center pb-3 md:pb-0">
-      <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 sm:p-6 md:p-8 w-full sm:w-auto sm:order-1">
-        <h1 className="text-3xl font-bold mb-6 text-center text-purple-800">Enter all details</h1>
+      <motion.div
+        initial={{ opacity: 0, x: -150 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          type: "spring",
+          stiffness: 100,
+          delay: 0.5,
+        }}
+        className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 sm:p-6 md:p-8 w-full sm:w-auto sm:order-1"
+      >
+        <h1 className="text-3xl font-bold mb-6 text-center text-purple-800">
+          Enter all details
+        </h1>
         <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <div className="mb-4">
-                <label htmlFor="Age" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="Age"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   Age
                 </label>
                 <input
@@ -56,7 +76,10 @@ const Prediction = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="Pregnancies" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="Pregnancies"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   Pregnancies
                 </label>
                 <input
@@ -68,7 +91,10 @@ const Prediction = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="Glucose" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="Glucose"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   Glucose
                 </label>
                 <input
@@ -80,7 +106,10 @@ const Prediction = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="BloodPressure" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="BloodPressure"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   Blood Pressure
                 </label>
                 <input
@@ -94,7 +123,10 @@ const Prediction = () => {
             </div>
             <div>
               <div className="mb-4">
-                <label htmlFor="Insulin" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="Insulin"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   Insulin
                 </label>
                 <input
@@ -106,7 +138,10 @@ const Prediction = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="BMI" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="BMI"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   BMI
                 </label>
                 <input
@@ -118,7 +153,10 @@ const Prediction = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="SkinThickness" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="SkinThickness"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   Skin Thickness
                 </label>
                 <input
@@ -130,7 +168,10 @@ const Prediction = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="DPF" className="block text-gray-700 font-bold mb-2">
+                <label
+                  htmlFor="DPF"
+                  className="block text-gray-700 font-bold mb-2"
+                >
                   DPF
                 </label>
                 <input
@@ -148,8 +189,8 @@ const Prediction = () => {
               type="submit"
               className={`py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-300 ${
                 buttonDisabled
-                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                  : 'bg-purple-500 hover:bg-purple-700 text-white font-bold'
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-purple-500 hover:bg-purple-700 text-white font-bold"
               }`}
               disabled={buttonDisabled}
             >
@@ -157,8 +198,19 @@ const Prediction = () => {
             </button>
           </div>
         </form>
-      </div>
-      <div className="w-full sm:w-1/2 sm:ml-8 mt-8 sm:mt-0 sm:order-2">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 150 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          type: "spring",
+          stiffness: 100,
+          delay: 0.5,
+        }}
+        className="w-full sm:w-1/2 sm:ml-8 mt-8 sm:mt-0 sm:order-2"
+      >
         {!prediction && (
           <div className="hidden sm:block">
             <img
@@ -169,12 +221,18 @@ const Prediction = () => {
           </div>
         )}
         {prediction && (
-         <div className="bg-green-100 w-2/3 md:w-fit border mx-auto flex flex-col gap-5 border-green-400 text-green-700 py-2 rounded md:mr-4 text-center">
-         <img src={prediction.gif_url} alt="Prediction GIF" className="mx-auto pt-4 rounded-md" />
-         <p className='font-bold text-2xl px-3 mx-2 '>{prediction.prediction}</p>
-       </div>
+          <div className="bg-green-100 w-2/3 md:w-fit border mx-auto flex flex-col gap-5 border-green-400 text-green-700 py-2 rounded md:mr-4 text-center">
+            <img
+              src={prediction.gif_url}
+              alt="Prediction GIF"
+              className="mx-auto pt-4 rounded-md"
+            />
+            <p className="font-bold text-2xl px-3 mx-2 ">
+              {prediction.prediction}
+            </p>
+          </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };
