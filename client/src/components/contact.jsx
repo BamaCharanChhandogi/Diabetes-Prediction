@@ -1,85 +1,150 @@
-// src/components/ContactUs.js
-
 import React from "react";
+import image from '../assets/contact-form.jpg'
+
+const styles = {
+
+  containerContact: {
+    width: '90%',
+    maxWidth: '1000px',
+    height: 'auto',
+    margin: '50px auto',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    padding: '30px',
+    borderRadius: '20px',
+    boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.1)',
+    background: 'linear-gradient(135deg, #f5f7fa, #c3cfe2)',
+    overflow: 'hidden',
+  },
+  box1: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  box1Img: {
+    maxWidth: '100%',
+    height: 'auto',
+    borderRadius: '20px',
+  },
+  box2: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    padding: '20px',
+  },
+  heading: {
+    marginBottom: '20px',
+    color: '#3c3e41',
+    fontFamily: "sans-serif",
+    fontWeight: 800,
+    fontStyle: "normal",
+    fontSize: "24px"
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '15px',
+  },
+  input: {
+    width: '100%',
+    maxWidth: '100%',
+    padding: '15px',
+    borderRadius: '10px',
+    border: '2px solid #ddd',
+    fontSize: '16px',
+    background: '#fff',
+    transition: 'all 0.3s ease',
+    fontFamily: "sans-serif",
+    fontWeight: 800,
+    fontStyle: "normal",
+    outline: 'none',
+  },
+  inputFocus: {
+    borderColor: '#7666c6',
+    boxShadow: '0 0 10px rgba(118, 102, 198, 0.2)',
+  },
+  textarea: {
+    width: '100%',
+    maxWidth: '100%',
+    padding: '15px',
+    borderRadius: '10px',
+    border: '2px solid #ddd',
+    fontSize: '16px',
+    background: '#fff',
+    transition: 'all 0.3s ease',
+    resize: 'none',
+    outline: 'none',
+    fontFamily: "sans-serif",
+    fontWeight: 800,
+    fontStyle: "normal",
+  },
+  submitButton: {
+    marginTop: '20px',
+    padding: '15px',
+    fontSize: '16px',
+    borderRadius: '10px',
+    border: 'none',
+    cursor: 'pointer',
+    backgroundColor: '#7666c6',
+    color: 'white',
+    transition: 'background-color 0.3s ease',
+    fontFamily: "sans-serif",
+    fontWeight: 800,
+    fontStyle: "normal",
+  },
+  submitButtonHover: {
+    backgroundColor: '#5d50a0',
+  },
+  poppinsExtrabold: {
+    fontFamily: "sans-serif",
+    fontWeight: 800,
+    fontStyle: "normal",
+  }
+};
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-3xl">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <h2 className="mb-6 text-center text-3xl font-extrabold text-gray-900">
-            Contact Us
-          </h2>
-          <div className="mb-8 text-center">
-            <p className="text-gray-700">
-              <strong>Email:</strong> contact@example.com
-            </p>
-            <p className="text-gray-700">
-              <strong>Phone:</strong> +123 456 7890
-            </p>
-            <p className="text-gray-700">
-              <strong>Business Hours:</strong> Mon - Fri, 9 AM - 5 PM
-            </p>
-            <p className="text-gray-700">
-              <strong>Address:</strong> 123 Street Name, City Name, Country
-            </p>
-          </div>
-          <h3 className="text-lg font-medium text-gray-900 mb-4">
-            Use the form to get in touch. We attempt to respond to support requests within 1 business day.
-          </h3>
-          <form className="space-y-6" action="#" method="POST">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Name
-              </label>
-              <div className="mt-1">
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
-              </label>
-              <div className="mt-1">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
+    <div style={styles.containerContact}>
+      <div style={styles.box1}>
+        <img src={image} alt="contact-form" style={styles.box1Img} />
+      </div>
+      <div style={styles.box2}>
+        <h2 style={styles.heading}>Get in touch!</h2>
+        <form style={styles.form}>
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            style={styles.input}
+            className="poppinsExtrabold"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            style={styles.input}
+            className="poppinsExtrabold"
+            required
+          />
+          <textarea
+            rows="8"
+            id="message"
+            placeholder="Message"
+            style={styles.textarea}
+            className="poppinsExtrabold"
+            required
+          />
+          <button
+            type="submit"
+            style={styles.submitButton}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = styles.submitButtonHover.backgroundColor)}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = styles.submitButton.backgroundColor)}
+            className="poppinsExtrabold"
+          >
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );
