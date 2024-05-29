@@ -6,7 +6,7 @@ import Prediction from './components/Prediction';
 import DataInfo from './components/DataInfo';
 import Visualization from './components/Visualization';
 import Footer from './components/Footer';
-import ContactUs from './components/Contact';
+import ContactUs from './components/contact';
 import FloatBtn from './components/FloatBtn';
 import FAQ from './components/FAQ';
 
