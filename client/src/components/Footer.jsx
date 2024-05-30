@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -25,8 +26,8 @@ const Footer = () => {
           <ul className="space-y-2 text-lg">
             <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">Home</a></li>
             <li><a href="#" className="text-white hover:text-gray-400 transition-colors duration-300">About</a></li>
-            <li><a href="/prediction" className="text-white hover:text-gray-400 transition-colors duration-300">Prediction</a></li>
-            <li><a href="/contact" className="text-white hover:text-gray-400 transition-colors duration-300">Contact</a></li>
+            <li><Link to="/prediction" className="text-white hover:text-gray-400 transition-colors duration-300">Prediction</Link></li>
+            <li><Link to="/contact" className="text-white hover:text-gray-400 transition-colors duration-300">Contact</Link></li>
           </ul>
         </div>
         <div className="w-full md:w-1/3">
