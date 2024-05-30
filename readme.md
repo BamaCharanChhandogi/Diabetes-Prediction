@@ -193,7 +193,7 @@ We would like to thank the contributors and the community for their support and 
 
 <center>
 <a href="https://github.com/BamaCharanChhandogi/Diabetes-Prediction/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=BamaCharanChhandogi/Diabetes-Prediction" />
+  <img src="https://contrib.rocks/image?repo=BamaCharanChhandogi/Diabetes-Prediction&v=1" />
 </a>
 </center>
 
