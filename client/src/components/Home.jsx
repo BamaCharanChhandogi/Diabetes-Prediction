@@ -15,7 +15,8 @@ const Home = () => {
           backgroundImage: `url(${diabetesImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundColor: "#8b008b",
+          backgroundColor: "rgba(0,0,0,0.4)",
+          backgroundBlendMode: "multiply",
         }}
       >
         <div className="p-8 text-center">
@@ -29,7 +30,7 @@ const Home = () => {
               stiffness: 100,
               delay: 0.5,
             }}
-            className="text-4xl font-bold mb-4 text-purple-800"
+            className="text-4xl lg:text-5xl font-bold mb-4 text-purple-600 text-shadow-sm text-shadow shadow-black"
           >
             Welcome to the Diabetes Prediction App
           </motion.h1>
@@ -43,7 +44,7 @@ const Home = () => {
               stiffness: 100,
               delay: 1,
             }}
-            className="text-lg text-gray-800 mb-8"
+            className="text-lg mb-8 text-white"
           >
             This app helps you predict the likelihood of developing diabetes
             based on your health data.
@@ -61,7 +62,7 @@ const Home = () => {
           >
             <Link
               to="/prediction"
-              className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded transition-colors duration-300"
+              className="bg-purple-700 hover:bg-purple-800 text-white lg:text-xl font-bold py-2 px-4 rounded transition-colors duration-300 shadow-sm shadow-black"
             >
               Get Started
             </Link>
