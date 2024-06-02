@@ -1,27 +1,148 @@
-# 📜 **Contributing Guidelines** 
+# 📜 **Contributing to Diabetes Prediction Website**
 
 This document will guide you through the process of contributing to our repository. 
 We value the time and effort of our contributors, and we strive to create an inclusive and collaborative community.
 We are happy to welcome all the contributions from anyone willing to improve/add new scripts to this project.
 Thank you for helping out and remember, **no contribution is too small.**
 
+<br>
+
+## Table of Contents
+
+1. [📏 Code of Conduct](#code-of-conduct)
+2. [🤝 How to Contribute](#how-to-contribute)
+    - [🐞 Reporting Bugs](#reporting-bugs)
+    - [💡 Suggesting Enhancements](#suggesting-enhancements)
+    - [🔄 Pull Requests](#pull-requests)
+3. [🎨 Style Guides](#style-guides)
+    - [📜 Git Commit Messages](#git-commit-messages)
+    - [💻 Code Style](#code-style)
+4. [🚀 Getting Started](#getting-started)
+    - [🍴 Forking the Repository](#forking-the-repository)
+    - [📥 Cloning the Repository](#cloning-the-repository)
+    - [🌿 Creating a Branch](#creating-a-branch)
+    - [✨ Making Changes](#making-changes)
+    - [📤 Pushing Changes](#pushing-changes)
+    - [🔧 Creating a Pull Request](#creating-a-pull-request)
+5. [📚 Additional Resources](#additional-resources)
+6. [📈 Development Workflow](#development-workflow)
+7. [🚩 Issue Report Process](#issue-report-process)
+8. [🤔 Need Help regarding some basics?](#need-help-regarding-some-basics)
+9. [🚀 Pull Request Process](#pull-request-process)
+10. [🤝 Community Guidelines](#community-guidelines)
+11. [📑 Documentation](#documentation)
+12. [✅ Code Reviews](#code-reviews)
+13. [🚀 Feature Requests](#feature-requests)
+14. [☘️ Spread the Word](#spread-the-word)
+
+<br>
+
+## 📏 Code of Conduct 
 Please note we have a [code of conduct](CODE_OF_CONDUCT.md)  please follow it in all your interactions with the project.
 
 <br>
 
-## 🔁 Ways to Contribute (!Important)
+## 🤝 How to Contribute
 
-So by now you understood what this project is about but what exactly we would be doing in these 3 months?
-The goal of this repo is to create multiple games (we are not focused on one game but we would be making many small-big adventure games with their own stories)
-To acheive this task we need to follow these steps.
-1. Fork the repo
-2. Create a new folder (IMP) and start creating your gaming files
-3. Issues would be sub divided meaning, a game can be divided into sub parts, one issue for making prompts, one for creating gaming assets like characters and last one for creating actual game python file
-4. After doing your task make a pull request
-5. Make sure you do not change someone else file.
-6. Plagiarism is big no and doing so may result in lost of ranks and ban from repo.
-7. Based on efforts levels will be given
-8. If any issue contact Project Admin
+### 🐞 Reporting Bugs
+
+If you find a bug, please create an issue using the [Bug Report Template](https://github.com/[your-username]/diabetes-prediction-website/issues/new?template=bug_report.md). Be sure to include detailed information such as the steps to reproduce the bug, the expected outcome, and the actual outcome.
+
+### 💡 Suggesting Enhancements
+
+Have a great idea for a new feature? We'd love to hear it! Open an issue using the [Feature Request Template](https://github.com/[your-username]/diabetes-prediction-website/issues/new?template=feature_request.md) and describe your enhancement in detail.
+
+### 🔄 Pull Requests
+
+We welcome pull requests for bug fixes, features, and documentation improvements. To ensure your pull request is reviewed promptly, please adhere to the following guidelines:
+
+- Fork the repository and create a new branch for your work.
+- Follow the [Style Guides](#style-guides).
+- Ensure your code is well-documented and includes tests.
+- Reference any related issues in your pull request description.
+
+<br>
+
+## 🎨 Style Guides
+
+### 📜 Git Commit Messages
+
+- Use the present tense ("Add feature" not "Added feature").
+- Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
+- Limit the first line to 72 characters or less.
+- Reference issues and pull requests liberally.
+
+### 💻 Code Style
+
+- Follow the [PEP 8](https://pep8.org/) style guide for Python code.
+- Use meaningful variable and function names.
+- Write comments and documentation where necessary.
+
+<br>
+
+## 🚀 Getting Started
+
+We welcome contributions! To contribute to this project, follow these detailed steps:
+
+### 🍴 Forking the Repository
+   - Navigate to the main repository.
+   - Click on the "Fork" button in the upper right corner of the repository page. This will create a copy of the repository in your GitHub account.
+
+### 📥 Cloning the Repository
+   - Clone your forked repository to your local machine using the following command:
+     ```bash
+     git clone https://github.com/<your-username>/<repository-name>.git
+     ```
+   - Replace `<your-username>` with your GitHub username and `<repository-name>` with the name of the repository you just forked.
+
+### 🌿 Creating a Branch
+   - Navigate into the cloned repository:
+     ```bash
+     cd <repository-name>
+     ```
+   - Create a new branch for your feature or bug fix:
+     ```bash
+     git checkout -b <branch-name>
+     ```
+   - Replace `<branch-name>` with a descriptive name for your branch, such as `feature/add-new-feature` or `bugfix/fix-issue`.
+
+### ✨ Making Changes
+   - Implement your changes in the new branch you created.
+   - Ensure that your code follows the project's coding standards and guidelines.
+   - Test your changes thoroughly to ensure they work as expected.
+
+### 📝 Commit Your Changes
+   - Stage your changes for commit:
+     ```bash
+     git add .
+     ```
+   - Commit your changes with a descriptive commit message:
+     ```bash
+     git commit -m "Add detailed description of what your commit does"
+     ```
+   - Provide a clear and concise commit message that explains what changes you have made and why.
+
+### 📤 Pushing Changes to Your Fork
+   - Push your changes to the branch in your forked repository:
+     ```bash
+     git push origin <branch-name>
+     ```
+
+### 🔧 Creating a Pull Request
+   - Go to your forked repository on GitHub.
+   - Click on the "Compare & pull request" button for the branch you just pushed.
+   - Provide a descriptive title and detailed description for your pull request.
+   - Explain what changes you have made, why you made them, and any other relevant information.
+   - Submit the pull request to the main repository.
+
+### 🛠 Review Process
+   - Your pull request will be reviewed by the maintainers of the project.
+   - Be responsive to any feedback or questions they may have.
+   - Make any necessary changes as requested by the maintainers.
+
+### 🎉 Merge
+   - Once your pull request is approved, it will be merged into the main repository.
+   - Congratulations! You have successfully contributed to the project.
 
 <br>
 
@@ -59,6 +180,8 @@ To acheive this task we need to follow these steps.
 9. **Wait for Review:**
     Your pull request will now be available for review by the project maintainers. They may provide feedback or ask for changes before merging your pull request into the main branch of the SuperpeechSaga repository.
 
+<br>
+
 ## 📈 Development Workflow
 
 When working on the project, please follow these guidelines:
@@ -69,10 +192,9 @@ When working on the project, please follow these guidelines:
 4. Test your changes thoroughly before submitting a pull request.
 5. Keep discussions polite and respectful.
 
-
 <br>
 
-## 🚩 **Issue Report Process**
+## 🚩 Issue Report Process
 
 1. Go to the project's issues.
 2. Select the template that better fits your issue.
@@ -83,8 +205,7 @@ When working on the project, please follow these guidelines:
 
 <br>
 
-## **Need Help regarding some basics? 🤔**
-
+## 🤔 Need Help regarding some basics?
 
 You can refer to the following articles on basics of Git and Github and also contact the Project Mentors,
 in case you are stuck:
@@ -97,7 +218,7 @@ in case you are stuck:
 
 <br>
 
-## **Pull Request Process 🚀**
+## 🚀 Pull Request Process
 
 1. Ensure that you have self reviewed your code.
 2. Make sure you have added the proper description for the functionality of the code.
@@ -119,21 +240,40 @@ We expect all contributors to adhere to the following community guidelines:
 
 <br>
 
-## Documentation 📑
+## 📑 Documentation
 - Document any significant changes or additions to the codebase.
 - Provide clear and concise explanations of the functionality, usage, and any relevant considerations.
+
+<br>
 
 ## ✅ Code Reviews
 - Be open to feedback and constructive criticism from other contributors.
 - Participate in code reviews by reviewing and providing feedback.
 
-## 🚀🚀Feature Requests
+<br>
+
+## 🚀 Feature Requests
 - Suggest new features or improvements that you believe would enhance the project.
+
+<br>
 
 ## ☘️ Spread the Word
 - Share your experience and the project with others.
 - Spread the word about the project on social media, developer forums, or any relevant community platforms.
 - Thank you for your valuable contribution and for being a part of the Clueless Community! Together, we can make a difference. 🚀
 
+<br>
+
+## 📚 Additional Resources
+
+- [GitHub Documentation](https://docs.github.com/)
+- [Open Source Guides](https://opensource.guide/)
+- [PEP 8 Style Guide](https://pep8.org/)
+
+<br>
+
+Thank you for contributing to the Diabetes Prediction Website! Your efforts help us make a positive impact on health and wellness.
 
 ## **Happy Contributing 🔥** 
+
+<br>
