@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,67 +14,20 @@ const Footer = () => {
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl font-semibold mb-4">Stay Connected</h2>
           <div className="flex space-x-4 text-lg">
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-colors duration-300"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-colors duration-300"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-colors duration-300"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-colors duration-300"
-            >
-              <FaLinkedinIn />
-            </a>
+            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaFacebookF /></a>
+            <a href="https://x.com/BamacharanCh/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaTwitter /></a>
+            <a href="https://www.instagram.com/loving_coding" className="text-white hover:text-gray-400 transition-colors duration-300"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/bama-charan-chhandogi-b63420240/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaLinkedinIn /></a>
+
           </div>
         </div>
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl font-semibold mb-4">Quick Links</h2>
           <ul className="space-y-2 text-lg">
-            <li>
-              <a
-                href="#"
-                className="text-white hover:text-gray-400 transition-colors duration-300"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white hover:text-gray-400 transition-colors duration-300"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white hover:text-gray-400 transition-colors duration-300"
-              >
-                Prediction
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white hover:text-gray-400 transition-colors duration-300"
-              >
-                Contact
-              </a>
-            </li>
+            <li><Link href="/" className="text-white hover:text-gray-400 transition-colors duration-300">Home</Link></li>
+            <li><Link href="/FAQ" className="text-white hover:text-gray-400 transition-colors duration-300">FAQ</Link></li>
+            <li><Link to="/prediction" className="text-white hover:text-gray-400 transition-colors duration-300">Prediction</Link></li>
+            <li><Link to="/contact" className="text-white hover:text-gray-400 transition-colors duration-300">Contact</Link></li>
           </ul>
         </div>
         <div className="w-full md:w-1/3">
