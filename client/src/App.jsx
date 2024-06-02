@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 import ContactUs from './components/contact';
 import FloatBtn from './components/FloatBtn';
 import FAQ from './components/FAQ';
-import './App.css';
 
 const App = () => {
   return (
