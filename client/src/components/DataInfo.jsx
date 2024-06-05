@@ -80,11 +80,13 @@ function DataInfo() {
                       className="px-4 py-2 bg-purple-100 text-purple-800 sticky top-0 font-bold border cursor-pointer relative"
                     >
                       {header}
-                      {sortedColumn === header && (
-                        <span className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                          {sortDirection === "asc" ? " ▲" : " ▼"}
-                        </span>
-                      )}
+                      <span className="absolute right-0 top-1/2 transform -translate-y-1/2">
+                        {sortedColumn === header
+                          ? sortDirection === "asc"
+                            ? " ▲"
+                            : " ▼"
+                          : "▼"}
+                      </span>
                     </th>
                   ))}
                 </tr>
