@@ -1,10 +1,9 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaTwitter,
+import { 
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -13,9 +12,8 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-6 md:px-12 lg:px-20 space-y-8 md:space-y-0">
         <div className="w-full md:w-1/3">
           <h2 className="text-2xl font-semibold mb-4">Stay Connected</h2>
-          <div className="flex space-x-4 text-lg">
-            <a href="#" className="text-white hover:text-gray-400 transition-colors duration-300"><FaFacebookF /></a>
-            <a href="https://x.com/BamacharanCh/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaTwitter /></a>
+          <div className="flex space-x-4 text-lg">           
+            <a href="https://x.com/BamacharanCh/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaXTwitter /></a>
             <a href="https://www.instagram.com/loving_coding" className="text-white hover:text-gray-400 transition-colors duration-300"><FaInstagram /></a>
             <a href="https://www.linkedin.com/in/bama-charan-chhandogi-b63420240/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaLinkedinIn /></a>
 
