@@ -21,7 +21,7 @@ const Prediction = () => {
     setButtonDisabled(true);
     try {
       const response = await axios.post(
-        "http://localhost:8000/predict",
+        "https://diabetes-prediction-1-6a5i.onrender.com/predict",
         userInput
       );
       console.log("API Response:", response.data);
