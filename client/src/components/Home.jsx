@@ -21,52 +21,142 @@ const Home = () => {
       >
         <div className="p-8 text-center">
           <motion.h1
-            initial={{ opacity: 0, y: -150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              stiffness: 100,
-              delay: 0.5,
-            }}
-            className="text-4xl lg:text-5xl font-bold mb-4 text-purple-600 text-shadow-sm text-shadow shadow-black"
+          initial={{ opacity: 0, y: -150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+            type: "spring",
+            stiffness: 100,
+            delay: 0.5,
+          }}
+          className="diabetes-predictor-header"
+          style={{
+            position: 'absolute',
+            width: '1150px',
+            height: '197px',
+            left: '45px',
+            top: '220px',
+            fontFamily: "'Abhaya Libre ExtraBold'",
+            fontStyle: 'normal',
+            fontWeight: 800,
+            fontSize: '50px',
+            lineHeight: '92px',
+            display: 'flex',
+            alignItems: 'flex-end',
+            color: '#FFFFFF',
+          }}
           >
-            Welcome to the Diabetes Prediction App
+          Welcome to the Diabetes Predictor!
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              type: "spring",
-              stiffness: 100,
-              delay: 1,
-            }}
-            className="text-lg mb-8 text-white"
-          >
-            This app helps you predict the likelihood of developing diabetes
-            based on your health data.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              stiffness: 100,
-              delay: 1,
-            }}
-          >
-            <Link
-              to="/prediction"
-              className="bg-purple-700 hover:bg-purple-800 text-white lg:text-xl font-bold py-2 px-4 rounded transition-colors duration-300 shadow-sm shadow-black"
-            >
-              Get Started
-            </Link>
-          </motion.div>
+  initial={{ opacity: 0, y: 150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    type: "spring",
+    stiffness: 100,
+    delay: 1,
+  }}
+  style={{
+    position: 'absolute',
+    width: '444px',
+    height: '80px',
+    left: '81px',
+    top: '374px',
+    fontFamily: "'Abhaya Libre ExtraBold', serif",
+    fontStyle: 'normal',
+    fontWeight: 800,
+    fontSize: '40px',
+    lineHeight: '80px',
+    display: 'flex',
+    alignItems: 'flex-end',
+    color: '#FFFFFF',
+  }}
+>
+  Know your risk,
+</motion.p>
+
+<motion.p
+  initial={{ opacity: 0, y: 150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    type: "spring",
+    stiffness: 100,
+    delay: 1.2, // Slightly delay the second text for a staggered effect
+  }}
+  style={{
+    position: 'absolute',
+    width: '771px',
+    height: '80px',
+    left: '81px',
+    top: '414px',
+    fontFamily: "'Abhaya Libre ExtraBold', serif",
+    fontStyle: 'normal',
+    fontWeight: 800,
+    fontSize: '40px',
+    lineHeight: '80px',
+    display: 'flex',
+    alignItems: 'flex-end',
+    color: '#FFFFFF',
+  }}
+>
+  take control of your health.
+</motion.p>
+
+<motion.div
+  initial={{ opacity: 0, y: 150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    type: "spring",
+    stiffness: 100,
+    delay: 1.2,
+  }}
+  style={{
+    position: 'absolute',
+    width: '250px',
+    height: '60px',
+    left: '80px',
+    top: '510px',
+    background: '#FF9900',
+    border: '1px solid #5C3200',
+    borderRadius: '15px',
+    boxSizing: 'border-box',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+>
+  <Link
+    to="/prediction"
+    style={{
+      position: 'absolute',
+      width: '305px',
+      height: '46px',
+      left: '-30px', // Adjusted based on the div's position
+      top: '5px', // Centered vertically within the div
+      fontFamily: "'Abhaya Libre ExtraBold', serif",
+      fontStyle: 'normal',
+      fontWeight: 800,
+      fontSize: '23px',
+      lineHeight: '57px',
+      color: '#FFFFFF',
+      textAlign: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: 'transparent', // Ensures link background is transparent
+    }}
+  >
+    GET STARTED 
+  </Link>
+</motion.div>
+
         </div>
       </div>
 
