@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import * as Papa from "papaparse";
 import _ from "lodash";
+import Loader from "./Loader"; // Import the Loader component
 
 function DataInfo() {
   const [data, setData] = useState([]);
@@ -106,7 +107,7 @@ function DataInfo() {
           </div>
         </motion.div>
       ) : (
-        <p>Loading data...</p>
+        <Loader /> // Display the loader while data is being fetched
       )}
     </div>
   );
