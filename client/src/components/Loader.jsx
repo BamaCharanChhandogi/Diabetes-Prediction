@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Loader = () => {
   return (
-    <div className="flex justify-center items-center h-64">
+    <div className="flex flex-col justify-center items-center h-64">
       <motion.div
         className="w-12 h-12 rounded-full bg-purple-500"
         animate={{
@@ -16,6 +16,7 @@ const Loader = () => {
           repeat: Infinity,
         }}
       />
+      <p className="mt-4 text-purple-500">Loading data...</p>
     </div>
   );
 };
