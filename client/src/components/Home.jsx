@@ -20,36 +20,43 @@ const Home = () => {
         }}
       >
         <div className="p-8 text-center">
+         
           <motion.h1
-          initial={{ opacity: 0, y: -150 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1,
-            type: "spring",
-            stiffness: 100,
-            delay: 0.5,
-          }}
-          className="diabetes-predictor-header"
-          style={{
-            position: 'absolute',
-            width: '1150px',
-            height: '197px',
-            left: '45px',
-            top: '220px',
-            fontFamily: "'Abhaya Libre ExtraBold'",
-            fontStyle: 'normal',
-            fontWeight: 800,
-            fontSize: '50px',
-            lineHeight: '92px',
-            display: 'flex',
-            alignItems: 'flex-end',
-            color: '#FFFFFF',
-          }}
-          >
-          Welcome to the Diabetes Predictor!
-          </motion.h1>
-          <motion.p
+  initial={{ opacity: 0, y: -150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 1,
+    type: "spring",
+    stiffness: 100,
+    delay: 0.5,
+  }}
+  className="diabetes-predictor-header"
+  style={{
+    position: 'absolute',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '1150px', /* Set a maximum width for larger screens */
+    height: 'auto', /* Let the height adjust based on content */
+    left: '-10%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '47%', /* Adjust based on your layout */
+    fontFamily: "'Abhaya Libre ExtraBold'",
+    fontStyle: 'normal',
+    fontWeight: 800,
+    fontSize: 'clamp(30px, 5vw, 50px)', /* Responsive font size using clamp */
+    lineHeight: '1.5', /* Adjust line height based on font size */
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center', /* Center text horizontally */
+    color: '#FFFFFF',
+    textAlign: 'center', /* Center text horizontally */
+  }}
+>
+  Welcome to the Diabetes Predictor!
+</motion.h1>
+
+          
+<motion.p
   initial={{ opacity: 0, y: 150 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
@@ -61,22 +68,28 @@ const Home = () => {
   }}
   style={{
     position: 'absolute',
-    width: '444px',
-    height: '80px',
-    left: '81px',
-    top: '374px',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '444px', /* Set a maximum width for larger screens */
+    height: 'auto', /* Let the height adjust based on content */
+    left: '-0.3%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '58.5%', /* Adjust based on your layout */
     fontFamily: "'Abhaya Libre ExtraBold', serif",
     fontStyle: 'normal',
     fontWeight: 800,
-    fontSize: '40px',
-    lineHeight: '80px',
+    fontSize: 'clamp(20px, 4vw, 40px)', /* Responsive font size using clamp */
+    lineHeight: '1.5', /* Adjust line height based on font size */
     display: 'flex',
     alignItems: 'flex-end',
+    justifyContent: 'center', /* Center text horizontally */
     color: '#FFFFFF',
+    textAlign: 'center', /* Center text horizontally */
   }}
 >
-  Know your risk,
+  Know your risk
 </motion.p>
+
+
 
 <motion.p
   initial={{ opacity: 0, y: 150 }}
@@ -90,18 +103,22 @@ const Home = () => {
   }}
   style={{
     position: 'absolute',
-    width: '771px',
-    height: '80px',
-    left: '81px',
-    top: '414px',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '771px', /* Set a maximum width for larger screens */
+    height: 'auto', /* Let the height adjust based on content */
+    left: '-5.2%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '63%', /* Adjust based on your layout */
     fontFamily: "'Abhaya Libre ExtraBold', serif",
     fontStyle: 'normal',
     fontWeight: 800,
-    fontSize: '40px',
-    lineHeight: '80px',
+    fontSize: 'clamp(20px, 4vw, 40px)', /* Responsive font size using clamp */
+    lineHeight: '1.5', /* Adjust line height based on font size */
     display: 'flex',
     alignItems: 'flex-end',
+    justifyContent: 'center', /* Center text horizontally */
     color: '#FFFFFF',
+    textAlign: 'center', /* Center text horizontally */
   }}
 >
   take control of your health.
@@ -119,13 +136,15 @@ const Home = () => {
   }}
   style={{
     position: 'absolute',
-    width: '250px',
-    height: '60px',
-    left: '80px',
-    top: '510px',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '250px', /* Set a maximum width for larger screens */
+    height: '8%', 
+    left: '5.4%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '73%', /* Adjust based on your layout */
     background: '#FF9900',
-    border: '1px solid #5C3200',
-    borderRadius: '15px',
+    border: '0.7px solid #5C3200',
+    borderRadius: '10px',
     boxSizing: 'border-box',
     display: 'flex',
     alignItems: 'center',
@@ -135,27 +154,25 @@ const Home = () => {
   <Link
     to="/prediction"
     style={{
-      position: 'absolute',
-      width: '305px',
-      height: '46px',
-      left: '-30px', // Adjusted based on the div's position
-      top: '5px', // Centered vertically within the div
+      width: '100%', /* Fill the entire width of the div */
+      height: '100%', /* Fill the entire height of the div */
       fontFamily: "'Abhaya Libre ExtraBold', serif",
       fontStyle: 'normal',
       fontWeight: 800,
-      fontSize: '23px',
-      lineHeight: '57px',
+      fontSize: 'clamp(14px, 3vw, 23px)', /* Responsive font size using clamp */
       color: '#FFFFFF',
       textAlign: 'center',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: 'transparent', // Ensures link background is transparent
+      textDecoration: 'none', // Remove underline from the link
     }}
   >
     GET STARTED 
   </Link>
 </motion.div>
+
 
         </div>
       </div>
