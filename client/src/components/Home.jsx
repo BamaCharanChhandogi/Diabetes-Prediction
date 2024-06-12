@@ -20,53 +20,160 @@ const Home = () => {
         }}
       >
         <div className="p-8 text-center">
+         
           <motion.h1
-            initial={{ opacity: 0, y: -150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              stiffness: 100,
-              delay: 0.5,
-            }}
-            className="text-4xl lg:text-5xl font-bold mb-4 text-purple-600 text-shadow-sm text-shadow shadow-black"
-          >
-            Welcome to the Diabetes Prediction App
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              type: "spring",
-              stiffness: 100,
-              delay: 1,
-            }}
-            className="text-lg mb-8 text-white"
-          >
-            This app helps you predict the likelihood of developing diabetes
-            based on your health data.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              stiffness: 100,
-              delay: 1,
-            }}
-          >
-            <Link
-              to="/prediction"
-              className="bg-purple-700 hover:bg-purple-800 text-white lg:text-xl font-bold py-2 px-4 rounded transition-colors duration-300 shadow-sm shadow-black"
-            >
-              Get Started
-            </Link>
-          </motion.div>
+  initial={{ opacity: 0, y: -150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 1,
+    type: "spring",
+    stiffness: 100,
+    delay: 0.5,
+  }}
+  className="diabetes-predictor-header"
+  style={{
+    position: 'absolute',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '1150px', /* Set a maximum width for larger screens */
+    height: 'auto', /* Let the height adjust based on content */
+    left: '-10%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '47%', /* Adjust based on your layout */
+    fontFamily: "'Abhaya Libre ExtraBold'",
+    fontStyle: 'normal',
+    fontWeight: 800,
+    fontSize: 'clamp(30px, 5vw, 50px)', /* Responsive font size using clamp */
+    lineHeight: '1.5', /* Adjust line height based on font size */
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center', /* Center text horizontally */
+    color: '#FFFFFF',
+    textAlign: 'center', /* Center text horizontally */
+  }}
+>
+  Welcome to the Diabetes Predictor!
+</motion.h1>
+
+          
+<motion.p
+  initial={{ opacity: 0, y: 150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    type: "spring",
+    stiffness: 100,
+    delay: 1,
+  }}
+  style={{
+    position: 'absolute',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '444px', /* Set a maximum width for larger screens */
+    height: 'auto', /* Let the height adjust based on content */
+    left: '-0.3%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '58.5%', /* Adjust based on your layout */
+    fontFamily: "'Abhaya Libre ExtraBold', serif",
+    fontStyle: 'normal',
+    fontWeight: 800,
+    fontSize: 'clamp(20px, 4vw, 40px)', /* Responsive font size using clamp */
+    lineHeight: '1.5', /* Adjust line height based on font size */
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center', /* Center text horizontally */
+    color: '#FFFFFF',
+    textAlign: 'center', /* Center text horizontally */
+  }}
+>
+  Know your risk
+</motion.p>
+
+
+
+<motion.p
+  initial={{ opacity: 0, y: 150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    type: "spring",
+    stiffness: 100,
+    delay: 1.2, // Slightly delay the second text for a staggered effect
+  }}
+  style={{
+    position: 'absolute',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '771px', /* Set a maximum width for larger screens */
+    height: 'auto', /* Let the height adjust based on content */
+    left: '-5.2%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '63%', /* Adjust based on your layout */
+    fontFamily: "'Abhaya Libre ExtraBold', serif",
+    fontStyle: 'normal',
+    fontWeight: 800,
+    fontSize: 'clamp(20px, 4vw, 40px)', /* Responsive font size using clamp */
+    lineHeight: '1.5', /* Adjust line height based on font size */
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center', /* Center text horizontally */
+    color: '#FFFFFF',
+    textAlign: 'center', /* Center text horizontally */
+  }}
+>
+  take control of your health.
+</motion.p>
+
+<motion.div
+  initial={{ opacity: 0, y: 150 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    type: "spring",
+    stiffness: 100,
+    delay: 1.2,
+  }}
+  style={{
+    position: 'absolute',
+    width: '90%', /* Use percentage for width to make it responsive */
+    maxWidth: '250px', /* Set a maximum width for larger screens */
+    height: '8%', 
+    left: '5.4%', /* Center horizontally */
+    transform: 'translateX(-50%)', /* Center horizontally */
+    top: '73%', /* Adjust based on your layout */
+    background: '#FF9900',
+    border: '0.7px solid #5C3200',
+    borderRadius: '10px',
+    boxSizing: 'border-box',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+>
+  <Link
+    to="/prediction"
+    style={{
+      width: '100%', /* Fill the entire width of the div */
+      height: '100%', /* Fill the entire height of the div */
+      fontFamily: "'Abhaya Libre ExtraBold', serif",
+      fontStyle: 'normal',
+      fontWeight: 800,
+      fontSize: 'clamp(14px, 3vw, 23px)', /* Responsive font size using clamp */
+      color: '#FFFFFF',
+      textAlign: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: 'transparent', // Ensures link background is transparent
+      textDecoration: 'none', // Remove underline from the link
+    }}
+  >
+    GET STARTED 
+  </Link>
+</motion.div>
+
+
         </div>
       </div>
 
