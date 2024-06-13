@@ -5,6 +5,7 @@ import predictionImg from "../assets/prediction.jpeg";
 import visualizationImg from "../assets/Visualization.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Testimonials from "./Testimonials/Testimonials.jsx";
 
 const Home = () => {
   return (
@@ -336,6 +337,18 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
+      <motion.div
+  initial={{ opacity: 0, x: -150 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    type: "spring",
+    stiffness: 100,
+    delay: 1,
+  }}>
+    <Testimonials />
+  </motion.div>
     </div>
   );
 };
