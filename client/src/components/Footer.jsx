@@ -1,5 +1,4 @@
-import { FaInstagram, FaLinkedinIn,FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/tab-icon.png'; // Import your logo image
 
@@ -8,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto flex flex-col md:flex-row justify-start items-start px-4 md:px-15 lg:px-100 space-y-8 md:space-y-0">
         <div className="w-full md:w-2/4 flex flex-col md:flex-row items-start md:items-center mb-8 md:mb-0">
-        <Link to="/" className="cursor-pointer">
+          <Link to="/" className="cursor-pointer">
             <img src={logo} alt="Diabetes Prediction Logo" className="w-16 h-16 md:w-20 md:h-20 mr-4" />
           </Link>
           <div>
@@ -29,10 +28,10 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="w-full md:w-1/4 mb-8 md:mb-0  md:px-10 lg:px-50">
+        <div className="w-full md:w-1/4 mb-8 md:mb-0 md:px-10 lg:px-50">
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <div className="flex items-center text-gray-400 text-lg mb-4">
-            <FaMapMarkerAlt className="mr-2 text-2xl"  />
+            <FaMapMarkerAlt className="mr-2 text-2xl" />
             <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">123 Street Name, City Name, Country</a>
           </div>
           <div className="flex items-center text-gray-400 text-lg mb-4">
@@ -48,13 +47,19 @@ const Footer = () => {
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
           <h2 className="text-2xl font-semibold mb-4">Stay Connected</h2>
           <div className="flex space-x-4 text-2lg">
-            <a href="https://twitter.com/BamaCharanCh/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaTwitter className="text-2xl" /></a>
-            <a href="https://www.instagram.com/loving_coding" className="text-white hover:text-gray-400 transition-colors duration-300"><FaInstagram  className="text-2xl"/></a>
-            <a href="https://www.linkedin.com/in/bama-charan-chhandogi-b63420240/" className="text-white hover:text-gray-400 transition-colors duration-300"><FaLinkedinIn  className="text-2xl"/></a>
+            <a href="https://twitter.com/BamaCharanCh/" className="text-white hover:text-gray-400 transition-colors duration-300">
+              <img src='https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff' alt="X Logo" className="w-8 h-8" />
+            </a>
+            <a href="https://www.instagram.com/loving_coding" className="text-white hover:text-gray-400 transition-colors duration-300">
+              <FaInstagram className="text-2xl" />
+            </a>
+            <a href="https://www.linkedin.com/in/bama-charan-chhandogi-b63420240/" className="text-white hover:text-gray-400 transition-colors duration-300">
+              <FaLinkedinIn className="text-2xl" />
+            </a>
           </div>
         </div>
       </div>
-      
+
       <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center px-6 md:px-12 lg:px-20">
         <div className="text-gray-400 text-center md:text-left mb-4 md:mb-0">
           <p>&copy; 2024 Diabetes Prediction. All rights reserved.</p>
