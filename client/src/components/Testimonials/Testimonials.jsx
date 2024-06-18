@@ -49,7 +49,7 @@ function Testimonials() {
   };
 
   return (
-    <div className='flex flex-col gap-4 px-[1rem] py-2 mb-4'>
+    <div className='flex flex-col gap-4 px-[3rem] py-2 mb-4'>
       <div className='text-2xl text-center font-bold text-blue-800'>
         Feedback from Our Users
       </div>
@@ -65,7 +65,7 @@ function Testimonials() {
         <div className='w-full flex justify-center overflow-hidden'>
           <div className='flex transition-transform duration-500 ease-in-out gap-3'>
             {getVisibleTestimonials().map((testimonial, index) => (
-              <div key={index} className='flex-shrink-0 w-full md:w-1/3 p-2'>
+              <div key={index} className='flex-shrink-0 w-full md:w-1/3 p-4'>
                 <div className='w-full h-full p-3 bg-blue-200 rounded-md shadow-md'>
                   <div className='flex items-center gap-4 p-2'>
                     <img src={testimonial.image} alt={testimonial.name} className='w-16 h-16 rounded-full' />
