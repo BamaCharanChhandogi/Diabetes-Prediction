@@ -1,32 +1,40 @@
 import React from 'react';
+import { Suspense } from 'react'; //Imported Suspense. It will be needed for lazy loading
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Prediction from './components/Prediction';
-import DataInfo from './components/DataInfo';
-import Visualization from './components/Visualization';
-import Footer from './components/Footer';
-import ContactUs from './components/contact';
-import FloatBtn from './components/FloatBtn';
-import FAQ from './components/FAQ';
-
+const Navbar =  React.lazy(() => import('./components/Navbar'));
+const Home = React.lazy(() => import('./components/Home')) ;
+const Prediction =  React.lazy(() => import('./components/Prediction'));
+const DataInfo = React.lazy(() => import('./components/DataInfo'));
+const Visualization = React.lazy(() => import('./components/Visualization'));
+const Footer = React.lazy(() => import('./components/Footer'));
+const ContactUs = React.lazy(() => import('./components/contact'));
+const FloatBtn = React.lazy(() => import( './components/FloatBtn'));
+const FAQ = React.lazy(() => import('./components/FAQ'));
+import LoadingSpinbar from './components/loadingSpinbar'; //The spinbar will render whenever loading content takes time
 const App = () => {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
-        <Navbar />
+        <Suspense fallback={<LoadingSpinbar/>}>
+          <Navbar />
+        </Suspense>
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/data-info" element={<DataInfo />} />
-            <Route path="/prediction" element={<Prediction />} />
-            <Route path="/visualization" element={<Visualization />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/FAQ" element={<FAQ />} />
+            <Route path="/" element={<Suspense fallback={<LoadingSpinbar />}><Home /></Suspense>} />
+            <Route path="/data-info" element={<Suspense fallback={<LoadingSpinbar/>}><DataInfo /></Suspense>} />
+            <Route path="/prediction" element={<Suspense fallback={<LoadingSpinbar/>}><Prediction /></Suspense>} />
+            <Route path="/visualization" element={<Suspense fallback={<LoadingSpinbar/>}><Visualization /></Suspense>} />
+            <Route path="/contact" element={<Suspense fallback={<LoadingSpinbar/>}><ContactUs /></Suspense>} />
+            <Route path="/FAQ" element={<Suspense fallback={<LoadingSpinbar/>}><FAQ /></Suspense>} />
           </Routes>
         </div>
-        <Footer />
-        <FloatBtn />
+        <Suspense fallback={<LoadingSpinbar/>}>
+          <Footer />
+        </Suspense>
+        <Suspense fallback={<LoadingSpinbar/>}>
+          <FloatBtn />
+        </Suspense>
+        
       </div>
     </Router>
   );
