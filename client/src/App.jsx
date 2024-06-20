@@ -19,8 +19,8 @@ const App = () => {
           <Navbar />
         </Suspense>
         <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Suspense fallback={<LoadingSpinbar />}><Home /></Suspense>} />
+          <Routes>    {/* The loading spinbar will be visible to the user whenever the contents are loading*/ }
+            <Route path="/" element={<Suspense fallback={<LoadingSpinbar />}><Home /></Suspense>} />    
             <Route path="/data-info" element={<Suspense fallback={<LoadingSpinbar/>}><DataInfo /></Suspense>} />
             <Route path="/prediction" element={<Suspense fallback={<LoadingSpinbar/>}><Prediction /></Suspense>} />
             <Route path="/visualization" element={<Suspense fallback={<LoadingSpinbar/>}><Visualization /></Suspense>} />
