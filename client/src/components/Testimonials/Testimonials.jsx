@@ -38,12 +38,12 @@ function Testimonials() {
     const fullStars = Math.floor(rating);
     const halfStars = rating % 1 !== 0 ? 1 : 0;
     const emptyStars = 5 - fullStars - halfStars;
-    
+
     return (
       <>
-        {Array(fullStars).fill(<FaStar className="text-yellow-500" />)}
-        {halfStars === 1 && <FaStarHalfAlt className="text-yellow-500" />}
-        {Array(emptyStars).fill(<FaStar className="text-gray-400" />)}
+        {Array(fullStars).fill().map((_, i) => <FaStar key={`full-${i}`} className="text-yellow-500" />)}
+        {halfStars === 1 && <FaStarHalfAlt key="half" className="text-yellow-500" />}
+        {Array(emptyStars).fill().map((_, i) => <FaStar key={`empty-${i}`} className="text-gray-400" />)}
       </>
     );
   };
@@ -64,8 +64,8 @@ function Testimonials() {
         </div>  
         <div className='w-full flex justify-center overflow-hidden'>
           <div className='flex transition-transform duration-500 ease-in-out gap-3'>
-            {getVisibleTestimonials().map((testimonial, index) => (
-              <div key={index} className='flex-shrink-0 w-full md:w-1/3 p-4'>
+            {getVisibleTestimonials().map((testimonial) => (
+              <div key={testimonial.id} className='flex-shrink-0 w-full md:w-1/3 p-4'>
                 <div className='w-full h-full p-3 bg-blue-200 rounded-md shadow-md'>
                   <div className='flex items-center gap-4 p-2'>
                     <img src={testimonial.image} alt={testimonial.name} className='w-16 h-16 rounded-full' />
