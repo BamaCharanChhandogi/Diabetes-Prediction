@@ -1,5 +1,6 @@
 const testimonials = [
     {
+        id: 1,
         name: "Sarah Thompson",
         position: "Nutritionist",
         company: "HealthyLiving",
@@ -8,6 +9,7 @@ const testimonials = [
         rating: 5,
     },
     {
+        id: 2,
         name: "David Miller",
         position: "Fitness Coach",
         company: "FitLife",
@@ -16,6 +18,7 @@ const testimonials = [
         rating: 4.5,
     },
     {
+        id: 3,
         name: "Linda Johnson",
         position: "Diabetes Specialist",
         company: "WellnessClinic",
@@ -24,6 +27,7 @@ const testimonials = [
         rating: 5,
     },
     {
+        id: 4,
         name: "Mark Lee",
         position: "Health Blogger",
         company: "HealthInsights",
@@ -32,6 +36,7 @@ const testimonials = [
         rating: 5,
     },
     {
+        id: 5,
         name: "Emily Davis",
         position: "Teacher",
         company: "Greenwood High",
