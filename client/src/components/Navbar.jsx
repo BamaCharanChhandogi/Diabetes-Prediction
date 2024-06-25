@@ -51,6 +51,12 @@ const Navbar = () => {
                 Visualization
               </Link>
               <Link
+                to="/sign-up"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+              >
+                Begin Your Journey 
+              </Link>
+              <Link
                 to="/contact"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
               >
@@ -122,6 +128,13 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             Visualization
+          </Link>
+          <Link
+            to="/sign-up"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            onClick={closeMenu}
+          >
+            Begin Your Journey
           </Link>
           <Link
             to="/contact"
