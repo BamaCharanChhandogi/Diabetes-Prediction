@@ -1,206 +1,127 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 import styled from "styled-components";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
-const Container = styled.div`
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
-  left: 0;
-  width: 100%; /* Full width by default */
-  opacity: 0;
-  z-index: 10;
-  ${props =>
-    !props.signIn &&
-    `
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-  `}
-
-  @media (min-width: 768px) {
-    width: 50%; /* Adjust width on larger screens */
-  }
-`;
-
-const Form = styled.form`
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1em;
-  height: 100%;
+const SignUpButton = styled.button`
+  width: 100%;
   text-align: center;
-`;
-
-const Title = styled.h1`
-  font-weight: bold;
-  margin: 0;
-  font-size: 1.5em;
-
-  @media (max-width: 768px) {
-    font-size: 1.2em;
-  }
-`;
-
-const InputWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  margin-bottom: 1.5em;
-`;
-
-const Input = styled.input`
-  background-color: #eee;
+  padding: 12px 0; /* Increased padding */
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1a365d; /* Dark blue background color */
   border: none;
-  padding: 0.8em;
-  margin: 0.5em 0;
-  width: 100%;
-  max-width: 400px; 
-`;
-
-const PasswordToggleIcon = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-`;
-
-const Button = styled.button`
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 0.8em 2.5em;
-  font-size: 0.9em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  border-radius: 5px;
   cursor: pointer;
   transition: transform 80ms ease-in;
-  margin-top: 1.5em;
 
   &:hover {
     transform: scale(1.05);
   }
-
   &:active {
     transform: scale(0.95);
   }
-
   &:focus {
     outline: none;
   }
 `;
 
-const ErrorMessage = styled.p`
-  color: red;
-  font-size: 0.9em;
-  margin-top: 0.5em;
-`;
-
-const SignUp = ({ signIn }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [passwordError, setPasswordError] = useState("");
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(prevState => !prevState);
-  };
-
-  const toggleConfirmPasswordVisibility = () => {
-    setShowConfirmPassword(prevState => !prevState);
-  };
-
-  const handlePasswordChange = e => {
-    const newPassword = e.target.value;
-    setPassword(newPassword);
-  };
-
-  const handleSignUp = e => {
-    e.preventDefault();
-    if (!name || !email || !password || !confirmPassword) {
-      setPasswordError("Please enter all fields.");
-      return;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setPasswordError("Please enter a valid email address.");
-      return;
-    }
-    if (password !== confirmPassword) {
-      setPasswordError("Passwords do not match.");
-      return;
-    }
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
-    if (!passwordRegex.test(password)) {
-      setPasswordError(
-        "Password must contain at least 8 characters with at least one uppercase letter, one lowercase letter, one number, and one special character."
-      );
-      return;
-    }
-    alert("Account created successfully!"); // Alert message on successful registration
-    console.log("Signing up with:", name, email, password);
-    setPasswordError("");
-  };
+function SignUp() {
+  const [passVis, setPassVis] = useState(false);
+  const [conVis, setConVis] = useState(false);
 
   return (
-    <Container signIn={signIn}>
-      <Form>
-        <Title>Create Account</Title>
-        <InputWrapper>
-          <Input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            required
-          />
-        </InputWrapper>
-        <InputWrapper>
-          <Input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-          />
-        </InputWrapper>
-        <InputWrapper>
-          <Input
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
-          <PasswordToggleIcon onClick={togglePasswordVisibility}>
-            {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-          </PasswordToggleIcon>
-        </InputWrapper>
-        <InputWrapper>
-          <Input
-            type={showConfirmPassword ? "text" : "password"}
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={e => setConfirmPassword(e.target.value)}
-            required
-          />
-          <PasswordToggleIcon onClick={toggleConfirmPasswordVisibility}>
-            {showConfirmPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-          </PasswordToggleIcon>
-        </InputWrapper>
-        {passwordError && <ErrorMessage>{passwordError}</ErrorMessage>}
-        <Button onClick={handleSignUp}>REGISTER</Button>
-      </Form>
-    </Container>
+    <>
+      <section className="bg-gray-900 py-8 min-h-screen signup"> {/* Match background color with Login.jsx */}
+        <div className="flex flex-col items-center max-w-[36rem] justify-center px-8 py-10 mx-auto mt-10 lg:py-12">
+          <div className="w-full bg-white rounded-lg shadow-lg">
+            <div className="p-8 space-y-6 md:space-y-8 sm:p-10">
+              <h1 className="text-2xl font-bold leading-tight tracking-tight text-gray-900 md:text-3xl">
+                BEGIN YOUR JOURNEY!
+              </h1>
+              <form className="space-y-6 md:space-y-8" action="#">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 text-sm font-medium text-gray-900"
+                  >
+                    Your email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
+                    placeholder="name@company.com"
+                    required=""
+                  />
+                </div>
+                <div className="relative">
+                  <label
+                    htmlFor="password"
+                    className="block mb-2 text-sm font-medium text-gray-900"
+                  >
+                    Password
+                  </label>
+                  <input
+                    type={passVis ? "text" : "password"}
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
+                    required=""
+                  />
+                  <span
+                    onClick={() => setPassVis(!passVis)}
+                    className="absolute right-4 top-10 text-gray-400 hover:cursor-pointer"
+                  >
+                    {passVis ? <IoEyeOff className="h-5 w-5" /> : <IoEye className="h-5 w-5" />}
+                  </span>
+                </div>
+                <div className="relative">
+                  <label
+                    htmlFor="confirm-password"
+                    className="block mb-2 text-sm font-medium text-gray-900"
+                  >
+                    Confirm password
+                  </label>
+                  <input
+                    type={conVis ? "text" : "password"}
+                    name="confirm-password"
+                    id="confirm-password"
+                    placeholder="••••••••"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
+                    required=""
+                  />
+                  <span
+                    onClick={() => setConVis(!conVis)}
+                    className="absolute right-4 top-10 text-gray-400 hover:cursor-pointer"
+                  >
+                    {conVis ? <IoEyeOff className="h-5 w-5" /> : <IoEye className="h-5 w-5" />}
+                  </span>
+                </div>
+                <div className="flex items-start">
+                  <SignUpButton type="submit">
+                    CREATE AN ACCOUNT
+                  </SignUpButton>
+                </div>
+                <p className="text-sm font-light text-gray-500 dark:text-gray-500">
+                  Already have an account?{" "}
+                  <Link
+                    to="/login"
+                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  >
+                    Login here
+                  </Link>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
-};
+}
 
 export default SignUp;

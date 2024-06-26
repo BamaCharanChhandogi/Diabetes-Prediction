@@ -1,71 +1,9 @@
 import React, { useState } from "react";
+import { IoEye, IoEyeOff } from "react-icons/io5";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { useGoogleLogin } from "@react-oauth/google";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
-const Container = styled.div`
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
-  left: 0;
-  width: 50%;
-  z-index: 1;
-  ${({ signIn }) => (!signIn ? 'transform: translateX(100%);' : null)}
-`;
-
-const Form = styled.form`
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 50px;
-  height: 100%;
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  font-weight: bold;
-  margin: 0;
-`;
-
-const InputWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  margin-bottom: 15px;
-`;
-
-const Input = styled.input`
-  background-color: #eee;
-  border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 100%;
-`;
-
-const ErrorMessage = styled.p`
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-`;
-
-const ForgotPasswordLink = styled(Link)`
-  color: blue;
-  text-decoration: none;
-  margin: 15px 0;
-  font-size: 14px;
-`;
-
-const PasswordToggleIcon = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-`;
-
+// CSS Styles for Google Logo
 const GoogleButton = styled.button`
   background-color: #ffffff;
   border: 1px solid #ccc;
@@ -85,105 +23,121 @@ const GoogleLogo = styled.img`
 `;
 
 const SignInButton = styled.button`
-  background-color: #1e90ff;
-  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1a365d;
   border: none;
-  border-radius: 20px;
-  padding: 0.8em 2.5em;
-  font-size: 0.9em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  border-radius: 5px;
   cursor: pointer;
   transition: transform 80ms ease-in;
-
   &:hover {
     transform: scale(1.05);
   }
-
   &:active {
     transform: scale(0.95);
   }
-
   &:focus {
     outline: none;
   }
 `;
 
-const Login = ({ signIn }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [passwordError, setPasswordError] = useState("");
+function Login() {
+  const [passVis, setPassVis] = useState(false);
+  const navigate = useNavigate();
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+  // Function for Google login
+  const googleLogin = () => {
+    signInWithGoogle();
   };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (!email || !password) {
-      setPasswordError("Please enter both email and password.");
-      return;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setPasswordError("Please enter a valid email address.");
-      return;
-    }
-    if (password.length < 6) {
-      setPasswordError("Password must be at least 6 characters.");
-      return;
-    }
-    console.log("Logging in with:", email, password);
-    setPasswordError("");
-  };
-
-  const googleLogin = useGoogleLogin({
-    onSuccess: (response) => console.log(response),
-    onError: (error) => console.error(error),
-  });
 
   return (
-    <Container signIn={signIn}>
-      <Form>
-        <Title>Sign in</Title>
-        <InputWrapper>
-          <Input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </InputWrapper>
-        <InputWrapper>
-          <Input
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <PasswordToggleIcon onClick={togglePasswordVisibility}>
-            {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-          </PasswordToggleIcon>
-        </InputWrapper>
-        {passwordError && <ErrorMessage>{passwordError}</ErrorMessage>}
-        <SignInButton type="submit">Sign In</SignInButton>
-        <ForgotPasswordLink to="/forgot-password">
-          Forgot your password?
-        </ForgotPasswordLink>
-        <GoogleButton onClick={googleLogin}>
-          <GoogleLogo
-            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-            alt="Google Logo"
-          />
-          Sign In with Google
-        </GoogleButton>
-      </Form>
-    </Container>
+    <>
+      <section className="bg-gray-900 py-8 min-h-screen login">
+        <div className="flex flex-col items-center max-w-[36rem] justify-center px-8 py-10 mx-auto mt-10 lg:py-12">
+          <div className="w-full bg-white rounded-lg shadow-lg">
+            <div className="p-8 space-y-6 md:space-y-8 sm:p-10">
+              <h1 className="text-2xl font-bold leading-tight tracking-tight text-gray-900 md:text-3xl">
+                WELCOME BACK!
+              </h1>
+              <form className="space-y-6 md:space-y-8" action="#">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 text-sm font-medium text-gray-900"
+                  >
+                    Your email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
+                    placeholder="name@company.com"
+                    required
+                  />
+                </div>
+                <div className="relative">
+                  <label
+                    htmlFor="password"
+                    className="block mb-2 text-sm font-medium text-gray-900"
+                  >
+                    Password 
+                  </label>
+                  <input
+                    type={passVis ? "text" : "password"}
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
+                    minLength={8}
+                    required
+                  />
+                  <span
+                    onClick={() => setPassVis(!passVis)}
+                    className="absolute right-4 top-10 text-gray-400 cursor-pointer"
+                  >
+                    {passVis ? <IoEyeOff className="h-5 w-5" /> : <IoEye className="h-5 w-5" />}
+                  </span>
+                </div>
+                <SignInButton type="submit">
+                  SIGN IN 
+                </SignInButton>
+                <div className="flex justify-center">
+                  <a
+                    href="#"
+                    className="text-sm font-medium text-primary-600 hover:underline mt-2"
+                  >
+                    Forgot password?
+                  </a>
+                </div>
+                {/* Google Sign In Button */}
+                <GoogleButton onClick={googleLogin}>
+                  <GoogleLogo
+                    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                    alt="Google Logo"
+                  />
+                  Sign In with Google
+                </GoogleButton>
+                <p className="text-sm font-light text-gray-500">
+                  Don’t have an account yet?{" "}
+                  <button
+                    onClick={() => navigate('/sign-up')}
+                    className="font-medium text-primary-600 hover:underline"
+                  >
+                    Sign up
+                  </button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
-};
+}
 
 export default Login;
