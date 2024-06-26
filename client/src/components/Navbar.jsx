@@ -16,49 +16,49 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 sticky z-50 top-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="bg-gray-800 sticky z-50 top-0 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between h-16 ">
           <div className="flex-shrink-0">
             <Link to="/" className="text-white font-bold">
               Diabetes Prediction App
             </Link>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4">
+            <div className="ml-10 flex items-center space-x-0 lg:space-x-4">
               <Link
                 to="/"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm lg:text-base font-medium"
               >
                 Home
               </Link>
               <Link
                 to="/data-info"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  text-sm lg:text-base font-medium"
               >
                 Data Info
               </Link>
               <Link
                 to="/prediction"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  text-sm lg:text-base font-medium"
               >
                 Prediction
               </Link>
               <Link
                 to="/visualization"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  text-sm lg:text-base font-medium"
               >
                 Visualization
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  text-sm lg:text-base font-medium"
               >
                 Contact Us
               </Link>
               <Link
                 to="/FAQ"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  text-sm  lg:text-base font-medium"
               >
                 FAQ
               </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 href="https://github.com/BamaCharanChhandogi/Diabetes-Prediction"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium flex gap-2 items-center border-2 border-red-800"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-1 lg:px-3 lg:py-2 rounded-md text-sm lg:text-base font-medium flex gap-2 items-center border-2 border-red-800"
               >
                 <CiStar className="w-7 h-7 text-yellow-500 font-bold" />
                 <FaGithub className="h-7 w-7" />
