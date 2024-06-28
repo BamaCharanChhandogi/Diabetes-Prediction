@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import backgroundImage from "../assets/background.jpg";
 import contactBackground from "../assets/contact-bg.jpg";
 
 const ContactUs = () => {
+  const [feedbackType, setFeedbackType] = useState("");
+  const [otherFeedback, setOtherFeedback] = useState("");
+
+  const handleFeedbackTypeChange = (e) => {
+    setFeedbackType(e.target.value);
+    if (e.target.value !== "Other") {
+      setOtherFeedback("");
+    }
+  };
+
+  const handleOtherFeedbackChange = (e) => {
+    setOtherFeedback(e.target.value);
+  };
+
   return (
     <div
       className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center sm:flex-row sm:justify-center pb-3 md:pb-0"
@@ -40,6 +54,32 @@ const ContactUs = () => {
               className="w-full p-4 rounded-lg border-2 border-gray-300 text-lg bg-white transition-all duration-300 outline-none focus:border-indigo-400 focus:shadow-md font-sans font-extrabold"
               required
             />
+            <select
+              id="feedbackType"
+              value={feedbackType}
+              onChange={handleFeedbackTypeChange}
+              className="w-full p-4 rounded-lg border-2 border-gray-300 text-lg bg-white transition-all duration-300 outline-none focus:border-indigo-400 focus:shadow-md font-sans font-extrabold"
+              required
+            >
+              <option value="" disabled>
+                Select feedback type
+              </option>
+              <option value="Question">Question</option>
+              <option value="Suggestion">Suggestion</option>
+              <option value="Issue">Issue</option>
+              <option value="Other">Other</option>
+            </select>
+            {feedbackType === "Other" && (
+              <input
+                type="text"
+                id="otherFeedback"
+                placeholder="Please specify"
+                value={otherFeedback}
+                onChange={handleOtherFeedbackChange}
+                className="w-full p-4 rounded-lg border-2 border-gray-300 text-lg bg-white transition-all duration-300 outline-none focus:border-indigo-400 focus:shadow-md font-sans font-extrabold"
+                required
+              />
+            )}
             <textarea
               rows="8"
               id="message"
