@@ -24,8 +24,8 @@ const Prediction = () => {
         "https://diabetes-prediction-1-6a5i.onrender.com/predict",
         userInput
       );
+      console.log("API Response:", response.data);
       setPrediction(response.data);
-      console.log(response.data);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -34,14 +34,14 @@ const Prediction = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
 
   const handleChange = (e) => {
     setUserInput({ ...userInput, [e.target.name]: e.target.value });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex flex-col items-center justify-center sm:flex-row sm:justify-center pb-3 md:pb-0">
+    <div className="min-h-screen bg-gradient-to-r from-purple-600 to-pink-600 flex flex-col items-center justify-center sm:flex-row sm:justify-center pb-3 md:pb-0">
       <motion.div
         initial={{ opacity: 0, x: -150 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -209,7 +209,7 @@ const Prediction = () => {
           stiffness: 100,
           delay: 0.5,
         }}
-        className="w-full sm:w-1/2 sm:ml-8 mt-8 sm:mt-0 sm:order-2"
+        className="w-full sm:w-1/2 sm:ml-8 mt-8 sm:mt-0 sm:order-2 flex justify-center"
       >
         {!prediction && (
           <div className="hidden sm:block">
@@ -221,15 +221,28 @@ const Prediction = () => {
           </div>
         )}
         {prediction && (
-          <div className="bg-green-100 w-2/3 md:w-fit border mx-auto flex flex-col gap-5 border-green-400 text-green-700 py-2 rounded md:mr-4 text-center">
+          
+          <div className="bg-green-100 w-full w-2/3 md:w-fit border mx-auto flex flex-col gap-5 border-green-400  py-2 rounded md:mr-4 text-center">
             <img
-              src={prediction.gif_url}
+              src={prediction.gif_url || ""}
               alt="Prediction GIF"
               className="mx-auto pt-4 rounded-md"
             />
-            <p className="font-bold text-2xl px-3 mx-2 ">
-              {prediction.prediction}
-            </p>
+            <h3 className="font-bold text-2xl text-black-800">
+              {prediction.message || "No message"}
+            </h3>
+            <div className="px-6 mx-4 text-left  text-green-800">
+              {prediction.recommendations && Array.isArray(prediction.recommendations) && prediction.recommendations.map((rec, index) => (
+                <p key={index} className="text-lg font-medium mb-2">
+                  • {rec.recommendation}
+                </p>
+              ))}
+            </div>
+            <a href={prediction.more_info_url} target="_blank" rel="noopener noreferrer">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-4">
+                Click here for more information
+              </button>
+            </a>
           </div>
         )}
       </motion.div>
