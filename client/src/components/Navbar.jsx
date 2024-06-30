@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +48,12 @@ const Navbar = () => {
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
               >
                 Visualization
+              </Link>
+              <Link
+                to="/sign-up"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+              >
+                Login/Register
               </Link>
               <Link
                 to="/contact"
@@ -122,6 +127,13 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             Visualization
+          </Link>
+          <Link
+            to="/sign-up"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            onClick={closeMenu}
+          >
+            Login/Register
           </Link>
           <Link
             to="/contact"
