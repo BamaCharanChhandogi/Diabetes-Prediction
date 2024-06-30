@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { signInWithGoogle } from './firebaseConfig'; // Import the sign-in function
 
 // CSS Styles for Google Logo
 const GoogleButton = styled.button`
@@ -49,9 +50,13 @@ function Login() {
   const [passVis, setPassVis] = useState(false);
   const navigate = useNavigate();
 
-  // Function for Google login
-  const googleLogin = () => {
-    signInWithGoogle();
+  const handleGoogleLogin = async () => {
+    try {
+      await signInWithGoogle();
+      navigate("/"); // Redirect to home page after successful login
+    } catch (error) {
+      console.error("Google sign-in error:", error);
+    }
   };
 
   return (
@@ -115,7 +120,7 @@ function Login() {
                   </a>
                 </div>
                 {/* Google Sign In Button */}
-                <GoogleButton onClick={googleLogin}>
+                <GoogleButton onClick={handleGoogleLogin}>
                   <GoogleLogo
                     src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
                     alt="Google Logo"
