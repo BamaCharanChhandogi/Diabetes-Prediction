@@ -16,6 +16,21 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 
 <br>
 
+  ## 🏆 Featured in:
+
+<table>
+    <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+    </tr>
+    <tr>
+        <td><img src="client/src/assets/Gssoc Label.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+        <td>GirlScript Summer of Code 2024</td>
+        <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development. 
+    </tr>
+</table>
+
 ## Table of Contents 📜
 
 1. [About Our Project](#about-our-project)
@@ -23,7 +38,9 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 3. [Technologies Used](#technologies-used)
 4. [Installation](#installation)
 5. [Contributing](#contributing)
-6. [Acknowledgements](#acknowledgements)
+6. [Code of Conduct](#code-of-conduct)
+7. [Acknowledgements](#acknowledgements)
+8. [LICENSE](LICENSE)
 
 <br>
 
@@ -183,6 +200,11 @@ We welcome contributions! To contribute to this project, follow these detailed s
 
 <br>
 
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+<br>
+
 ## 💬 Acknowledgements
 
 We would like to thank the contributors and the community for their support and feedback !!
@@ -197,3 +219,33 @@ We would like to thank the contributors and the community for their support and 
 </a>
 </center>
 
+## License
+
+Refer to [LICENSE](LICENSE) file for details.
+
+## GitHub Repository Stats 
+
+<div>
+
+<table>
+    <thead>
+        <tr border: 1px;>
+            <td ><b>🌟 Stars</b></td>
+            <td ><b>🍴 Forks</b></td>
+            <td ><b>🐛 Issues</b></td>
+            <td ><b>🔔 Open PRs</b></td>
+            <td ><b>🔕 Closed PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/EternoSeeker/gameoflife?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p> Don't forget to leave a star ⭐ for this project!</p>
