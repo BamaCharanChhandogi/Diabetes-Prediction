@@ -16,6 +16,21 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 
 <br>
 
+  ## 🏆 Featured in:
+
+<table>
+    <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+    </tr>
+    <tr>
+        <td><img src="images/Gssoc Label.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+        <td>GirlScript Summer of Code 2024</td>
+        <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development. 
+    </tr>
+</table>
+
 ## Table of Contents 📜
 
 1. [About Our Project](#about-our-project)
@@ -26,7 +41,6 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 6. [Acknowledgements](#acknowledgements)
 
 <br>
-
 ## About Our Project 🌟
 
 <p align="justify">
@@ -34,7 +48,6 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 </p>
 
 <br>
-
 ## ✨ Key Features
 
 - **🔍 Prediction Page**: This page lets you type in your personal details and health info. After that, it gives you an idea of how likely you are to get diabetes. It's like having a little crystal ball for your health!
@@ -44,7 +57,6 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 - **ℹ️ About Page**: Our About Page offers a detailed overview of the Diabetes Prediction Website, elucidating its purpose, features, and the dedicated team driving its development. It serves as a hub of information, empowering users with insights into their health risks while highlighting our mission to democratize predictive analytics for proactive wellness.
   
 <br>
-
 ## 🛠 Technologies Used
 
 ### 🖥 Frontend
@@ -75,7 +87,6 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 </div>
 
 <br>
-
 ## ⚡️ Installation
 
 To set up the project locally, follow these steps:
@@ -197,3 +208,28 @@ We would like to thank the contributors and the community for their support and 
 </a>
 </center>
 
+## GitHub Repository Stats 
+
+<div align = "center">
+
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td ><b>🌟 Stars</b></td>
+            <td ><b>🍴 Forks</b></td>
+            <td ><b>🐛 Issues</b></td>
+            <td ><b>🔔 Open PRs</b></td>
+            <td ><b>🔕 Closed PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/EternoSeeker/gameoflife?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/EternoSeeker/gameoflife?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+</div>
