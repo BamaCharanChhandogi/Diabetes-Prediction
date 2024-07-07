@@ -38,9 +38,12 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 3. [Technologies Used](#technologies-used)
 4. [Installation](#installation)
 5. [Contributing](#contributing)
-6. [Acknowledgements](#acknowledgements)
+6. [Code of Conduct](#code-of-conduct)
+7. [Acknowledgements](#acknowledgements)
+8. [LICENSE](LICENSE)
 
 <br>
+
 ## About Our Project 🌟
 
 <p align="justify">
@@ -48,6 +51,7 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 </p>
 
 <br>
+
 ## ✨ Key Features
 
 - **🔍 Prediction Page**: This page lets you type in your personal details and health info. After that, it gives you an idea of how likely you are to get diabetes. It's like having a little crystal ball for your health!
@@ -57,6 +61,7 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 - **ℹ️ About Page**: Our About Page offers a detailed overview of the Diabetes Prediction Website, elucidating its purpose, features, and the dedicated team driving its development. It serves as a hub of information, empowering users with insights into their health risks while highlighting our mission to democratize predictive analytics for proactive wellness.
   
 <br>
+
 ## 🛠 Technologies Used
 
 ### 🖥 Frontend
@@ -87,6 +92,7 @@ Welcome to our Diabetes Prediction Website! Our platform offers a unique opportu
 </div>
 
 <br>
+
 ## ⚡️ Installation
 
 To set up the project locally, follow these steps:
@@ -194,6 +200,11 @@ We welcome contributions! To contribute to this project, follow these detailed s
 
 <br>
 
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+<br>
+
 ## 💬 Acknowledgements
 
 We would like to thank the contributors and the community for their support and feedback !!
@@ -208,12 +219,16 @@ We would like to thank the contributors and the community for their support and 
 </a>
 </center>
 
+## License
+
+Refer to [LICENSE](LICENSE) file for details.
+
 ## GitHub Repository Stats 
 
-<div align = "center">
+<div>
 
-<table align="center">
-    <thead align="center">
+<table>
+    <thead>
         <tr border: 1px;>
             <td ><b>🌟 Stars</b></td>
             <td ><b>🍴 Forks</b></td>
@@ -233,3 +248,4 @@ We would like to thank the contributors and the community for their support and 
     </tbody>
 </table>
 </div>
+<p> Don't forget to leave a star ⭐ for this project!</p>
