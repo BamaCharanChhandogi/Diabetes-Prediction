@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
-import { FaBars, FaTimes } from "react-icons/fa";
+import logo_final from '../assets/logo_final.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +15,21 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const logoStyle = {
+    height: '50px',
+    width: '50px',
+    borderRadius: '50%',
+    marginRight: '10px',
+  };
+
   return (
     <nav className="bg-gray-800 sticky z-50 top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-white font-bold">
-              Diabetes Prediction App
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center">
+            <Link to="/" className="text-white font-bold flex items-center">
+              <img src={logo_final} alt="Logo" style={logoStyle} />
+              PreDiaBet
             </Link>
           </div>
           <div className="hidden md:block">
