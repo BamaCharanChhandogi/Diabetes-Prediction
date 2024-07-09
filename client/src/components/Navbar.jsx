@@ -16,20 +16,20 @@ const Navbar = () => {
   };
 
   const logoStyle = {
-    height: '60px', // Increased size for better visibility
+    height: '60px', // Adjusted size for better visibility
     width: '60px',
     borderRadius: '50%',
     marginRight: '10px',
   };
 
   return (
-    <nav className="bg-gray-800 sticky z-50 top-0" style={{ height: "4rem" }}>
+    <nav className="bg-gray-800 sticky z-50 top-0" style={{ height: "5rem" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="text-white font-bold flex items-center">
               <img src={logo_final} alt="Logo" style={logoStyle} />
-              Diabetes Prediction App
+              <span className="ml-2">PreDiaBet</span>
             </Link>
           </div>
           <div className="hidden md:block">
