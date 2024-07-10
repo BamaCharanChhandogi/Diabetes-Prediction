@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhone, FaGithub, FaQuora } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/tab-icon.png'; // Import your logo image
 
@@ -55,6 +55,12 @@ const Footer = () => {
             </a>
             <a href="https://www.linkedin.com/in/bama-charan-chhandogi-b63420240/" className="text-white hover:text-gray-400 transition-colors duration-300">
               <FaLinkedinIn className="text-2xl" />
+            </a>
+            <a href="https://github.com/BamaCharanChhandogi" className="text-white hover:text-gray-400 transition-colors duration-300">
+              <FaGithub className="text-2xl" />
+            </a>
+            <a href="https://quora.com/profile/Bama-Charan-Chhandogi" className="text-white hover:text-gray-400 transition-colors duration-300">
+              <FaQuora className="text-2xl" />
             </a>
           </div>
         </div>
