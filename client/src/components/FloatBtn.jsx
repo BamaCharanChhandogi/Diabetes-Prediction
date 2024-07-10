@@ -33,8 +33,8 @@ const BackToTop = () => {
 
   const buttonStyles = {
     position: 'fixed',
-    bottom: '20px',
-    right: '10px',
+    bottom: '95px',
+    right: '40px',
     zIndex: 1000,
     backgroundColor: '#7E22CE',
     color: '#ffffff',
