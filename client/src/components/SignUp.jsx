@@ -28,11 +28,16 @@ const SignUpButton = styled.button`
 `;
 
 function SignUp() {
+  const [email, setEmail] = useState("");
   const [passVis, setPassVis] = useState(false);
   const [conVis, setConVis] = useState(false);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
@@ -72,9 +77,11 @@ function SignUp() {
                   type="email"
                   name="email"
                   id="email"
+                  value={email}
+                  onChange={handleEmailChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
                   placeholder="name@company.com"
-                  required=""
+                  required
                 />
               </div>
               <div className="relative">
@@ -92,7 +99,7 @@ function SignUp() {
                   onChange={handlePasswordChange}
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
-                  required=""
+                  required
                 />
                 <span
                   onClick={() => setPassVis(!passVis)}
@@ -116,7 +123,7 @@ function SignUp() {
                   onChange={handleConfirmPasswordChange}
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
-                  required=""
+                  required
                 />
                 <span
                   onClick={() => setConVis(!conVis)}

@@ -1,11 +1,8 @@
 import React, { useState } from "react";
+import { FaGithub, FaBars, FaTimes } from "react-icons/fa"; // Combine the imports from react-icons/fa
 import { Link } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
-import { FaBars, FaTimes, FaGithub } from "react-icons/fa";
-import { FaGithub, FaBars, FaTimes } from "react-icons/fa"; 
-import { Link } from "react-router-dom";
-import { CiStar } from "react-icons/ci";
-import logo_final from '../assets/logo_final.png';
+import logo_final from '../assets/logo_final.png'; // Adjust the path to your logo
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +16,7 @@ const Navbar = () => {
   };
 
   const logoStyle = {
-    height: '60px',
+    height: '60px', // Adjusted size for better visibility
     width: '60px',
     borderRadius: '50%',
     marginRight: '10px',
@@ -37,52 +34,11 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              <Link
-                to="/"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
-              >
-                Home
-              </Link>
-              <Link
-                to="/data-info"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
-              >
-                Data Info
-              </Link>
-              <Link
-                to="/prediction"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
-              >
-                Prediction
-              </Link>
-              <Link
-                to="/visualization"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
-              >
-                Visualization
-              </Link>
-              <Link
-                to="/sign-up"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
-              >
-                Login/Register
-              </Link>
-              <Link
-                to="/contact"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
-              >
-                Contact Us
-              </Link>
-              <Link
-                to="/FAQ"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
-              >
-                FAQ
-              </Link>
               <NavLink to="/" onClick={closeMenu}>Home</NavLink>
               <NavLink to="/data-info" onClick={closeMenu}>Data Info</NavLink>
               <NavLink to="/prediction" onClick={closeMenu}>Prediction</NavLink>
               <NavLink to="/visualization" onClick={closeMenu}>Visualization</NavLink>
+              <NavLink to="/login" onClick={closeMenu}>Login/Register</NavLink>                          
               <NavLink to="/contact" onClick={closeMenu}>Contact Us</NavLink>
               <NavLink to="/FAQ" onClick={closeMenu}>FAQ</NavLink>
               <a
@@ -191,7 +147,7 @@ const Navbar = () => {
   );
 };
 
-// Custom NavLink component for internal links
+
 const NavLink = ({ to, children, onClick }) => (
   <Link
     to={to}
