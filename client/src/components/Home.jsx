@@ -20,7 +20,7 @@ const Home = () => {
           backgroundBlendMode: "multiply",
         }}
       >
-        <div className="p-8 text-center">
+        <div className="p-8 text-center space-y-6">
           <motion.h1
             initial={{ opacity: 0, y: -150 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -31,26 +31,12 @@ const Home = () => {
               stiffness: 100,
               delay: 0.5,
             }}
-            className="diabetes-predictor-header"
+            className="text-white font-extrabold"
             style={{
-              position: "absolute",
-              width: "90%" /* Use percentage for width to make it responsive */,
-              maxWidth: "1150px" /* Set a maximum width for larger screens */,
-              height: "auto" /* Let the height adjust based on content */,
-              left: "-10%" /* Center horizontally */,
-              transform: "translateX(-50%)" /* Center horizontally */,
-              top: "47%" /* Adjust based on your layout */,
               fontFamily: "'Abhaya Libre ExtraBold'",
-              fontStyle: "normal",
-              fontWeight: 800,
-              fontSize:
-                "clamp(30px, 5vw, 50px)" /* Responsive font size using clamp */,
-              lineHeight: "1.5" /* Adjust line height based on font size */,
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "center" /* Center text horizontally */,
-              color: "#FFFFFF",
-              textAlign: "center" /* Center text horizontally */,
+              fontSize: "clamp(30px, 5vw, 50px)",
+              lineHeight: "1.5",
+              textAlign: "center",
             }}
           >
             Welcome to the Diabetes Predictor!
@@ -66,25 +52,12 @@ const Home = () => {
               stiffness: 100,
               delay: 1,
             }}
+            className="text-white font-extrabold"
             style={{
-              position: "absolute",
-              width: "90%" /* Use percentage for width to make it responsive */,
-              maxWidth: "444px" /* Set a maximum width for larger screens */,
-              height: "auto" /* Let the height adjust based on content */,
-              left: "-0.3%" /* Center horizontally */,
-              transform: "translateX(-50%)" /* Center horizontally */,
-              top: "57%" /* Adjust based on your layout */,
               fontFamily: "'Abhaya Libre ExtraBold', serif",
-              fontStyle: "normal",
-              fontWeight: 800,
-              fontSize:
-                "clamp(20px, 4vw, 40px)" /* Responsive font size using clamp */,
-              lineHeight: "1.5" /* Adjust line height based on font size */,
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "center" /* Center text horizontally */,
-              color: "#FFFFFF",
-              textAlign: "center" /* Center text horizontally */,
+              fontSize: "clamp(20px, 4vw, 40px)",
+              lineHeight: "1.5",
+              textAlign: "center",
             }}
           >
             Know your risk
@@ -98,30 +71,17 @@ const Home = () => {
               duration: 0.8,
               type: "spring",
               stiffness: 100,
-              delay: 1.2, // Slightly delay the second text for a staggered effect
+              delay: 1.2,
             }}
+            className="text-white font-extrabold"
             style={{
-              position: "absolute",
-              width: "90%" /* Use percentage for width to make it responsive */,
-              maxWidth: "771px" /* Set a maximum width for larger screens */,
-              height: "auto" /* Let the height adjust based on content */,
-              left: "-5.2%" /* Center horizontally */,
-              transform: "translateX(-50%)" /* Center horizontally */,
-              top: "65%" /* Adjust based on your layout */,
               fontFamily: "'Abhaya Libre ExtraBold', serif",
-              fontStyle: "normal",
-              fontWeight: 800,
-              fontSize:
-                "clamp(20px, 4vw, 40px)" /* Responsive font size using clamp */,
-              lineHeight: "1.5" /* Adjust line height based on font size */,
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "center" /* Center text horizontally */,
-              color: "#FFFFFF",
-              textAlign: "center" /* Center text horizontally */,
+              fontSize: "clamp(20px, 4vw, 40px)",
+              lineHeight: "1.5",
+              textAlign: "center",
             }}
           >
-            take control of your health.
+            Take control of your health.
           </motion.p>
 
           <motion.div
@@ -134,40 +94,27 @@ const Home = () => {
               stiffness: 100,
               delay: 1.2,
             }}
+            className="w-full max-w-xs"
             style={{
-              position: "absolute",
-              width: "90%" /* Use percentage for width to make it responsive */,
-              maxWidth: "250px" /* Set a maximum width for larger screens */,
-              height: "8%",
-              left: "5.4%" /* Center horizontally */,
-              transform: "translateX(-50%)" /* Center horizontally */,
-              top: "76%" /* Adjust based on your layout */,
               background: "#FF9900",
               border: "0.7px solid #5C3200",
               borderRadius: "10px",
-              boxSizing: "border-box",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              padding: "10px",
+              margin: "0 auto",
             }}
           >
             <Link
               to="/prediction"
+              className="w-full h-full flex items-center justify-center text-white font-extrabold"
               style={{
-                width: "100%" /* Fill the entire width of the div */,
-                height: "100%" /* Fill the entire height of the div */,
                 fontFamily: "'Abhaya Libre ExtraBold', serif",
-                fontStyle: "normal",
-                fontWeight: 800,
-                fontSize:
-                  "clamp(14px, 3vw, 23px)" /* Responsive font size using clamp */,
-                color: "#FFFFFF",
+                fontSize: "clamp(14px, 3vw, 23px)",
                 textAlign: "center",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "transparent", // Ensures link background is transparent
-                textDecoration: "none", // Remove underline from the link
+                textDecoration: "none",
+                backgroundColor: "transparent",
               }}
             >
               GET STARTED
