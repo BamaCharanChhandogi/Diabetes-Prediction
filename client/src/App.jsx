@@ -15,13 +15,13 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Helmet from 'react-helmet';
 
-const clientId = '170594993017-7vbd8nf21nslhfjrf85ladpqmtj7ca7f.apps.googleusercontent.com';
-
 const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `;
+
+const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const App = () => {
   return (
