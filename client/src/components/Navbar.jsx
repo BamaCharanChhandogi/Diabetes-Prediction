@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { FaGithub, FaBars, FaTimes } from "react-icons/fa"; // Combine the imports from react-icons/fa
+import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
-import logo_final from '../assets/logo_final.png'; // Adjust the path to your logo
+import logo_final from "../assets/logo_final.png"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +16,10 @@ const Navbar = () => {
   };
 
   const logoStyle = {
-    height: '60px', // Adjusted size for better visibility
-    width: '60px',
-    borderRadius: '50%',
-    marginRight: '10px',
+    height: "60px",
+    width: "60px",
+    borderRadius: "50%",
+    marginRight: "10px",
   };
 
   return (
@@ -41,6 +41,24 @@ const Navbar = () => {
               <NavLink to="/login" onClick={closeMenu}>Login/Register</NavLink>                          
               <NavLink to="/contact" onClick={closeMenu}>Contact Us</NavLink>
               <NavLink to="/FAQ" onClick={closeMenu}>FAQ</NavLink>
+              <NavLink to="/" onClick={closeMenu}>
+                Home
+              </NavLink>
+              <NavLink to="/data-info" onClick={closeMenu}>
+                Data Info
+              </NavLink>
+              <NavLink to="/prediction" onClick={closeMenu}>
+                Prediction
+              </NavLink>
+              <NavLink to="/visualization" onClick={closeMenu}>
+                Visualization
+              </NavLink>
+              <NavLink to="/contact" onClick={closeMenu}>
+                Contact Us
+              </NavLink>
+              <NavLink to="/FAQ" onClick={closeMenu}>
+                FAQ
+              </NavLink>
               <a
                 href="https://github.com/BamaCharanChhandogi/Diabetes-Prediction"
                 target="_blank"
@@ -48,7 +66,7 @@ const Navbar = () => {
                 className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
                 onClick={closeMenu}
               >
-                <CiStar className="w-7 h-7 text-yellow-500 font-bold" />
+                <CiStar className="w-7 h-7 text-yellow-500 font-bold mr-2" />
                 <FaGithub className="h-7 w-7" />
               </a>
             </div>
@@ -130,6 +148,30 @@ const Navbar = () => {
           <NavLink to="/visualization" onClick={closeMenu}>Visualization</NavLink>
           <NavLink to="/contact" onClick={closeMenu}>Contact Us</NavLink>
           <NavLink to="/FAQ" onClick={closeMenu}>FAQ</NavLink>
+      <div
+        className={`fixed top-0 right-0 h-full bg-gray-800 bg-opacity-90 z-50 transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out md:hidden`}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1">
+          <NavLink to="/" onClick={closeMenu}>
+            Home
+          </NavLink>
+          <NavLink to="/data-info" onClick={closeMenu}>
+            Data Info
+          </NavLink>
+          <NavLink to="/prediction" onClick={closeMenu}>
+            Prediction
+          </NavLink>
+          <NavLink to="/visualization" onClick={closeMenu}>
+            Visualization
+          </NavLink>
+          <NavLink to="/contact" onClick={closeMenu}>
+            Contact Us
+          </NavLink>
+          <NavLink to="/FAQ" onClick={closeMenu}>
+            FAQ
+          </NavLink>
           <a
             href="https://github.com/BamaCharanChhandogi/Diabetes-Prediction"
             target="_blank"
@@ -137,8 +179,8 @@ const Navbar = () => {
             className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             onClick={closeMenu}
           >
-            <CiStar className="w-5 h-5 text-yellow-500 font-bold" />
-            <FaGithub className="h-5 w-5" />
+            <CiStar className="w-5 h-5 text-yellow-500 font-bold mr-2" />
+            <FaGithub className="h-5 w-5 mr-2" />
             GitHub
           </a>
         </div>
