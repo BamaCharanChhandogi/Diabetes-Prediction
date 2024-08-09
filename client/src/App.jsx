@@ -10,6 +10,7 @@ import ContactUs from "./components/contact";
 import FloatBtn from "./components/FloatBtn";
 import FAQ from "./components/FAQ";
 import Helmet from "react-helmet";
+import { JumboCursor } from 'react-jumbo-cursor';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       </Helmet>
       <Router>
         <div className="min-h-screen flex flex-col">
+        <JumboCursor color="126,34,206" />
           <Navbar />
           <div className="flex-grow">
             <Routes>
